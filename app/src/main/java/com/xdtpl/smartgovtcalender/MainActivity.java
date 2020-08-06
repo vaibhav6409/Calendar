@@ -202,6 +202,11 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
                                 startActivity(intent);
                                 return true;
                             }
+                            else if (id == R.id.nav_medicalbill) {
+                                Intent intent = new Intent(MainActivity.this, Medicalbill.class);
+                                startActivity(intent);
+                                return true;
+                            }
 
                             mDrawerLayout.closeDrawers();
 
