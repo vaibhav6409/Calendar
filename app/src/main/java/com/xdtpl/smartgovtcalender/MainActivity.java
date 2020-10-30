@@ -292,7 +292,7 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
                             currentMonth = calendar.get(MONTH);
 
                             break;
- /*
+
                         case "5":
                             calendar.set(MONTH, 5);
                             currentMonth = calendar.get(MONTH);
@@ -327,7 +327,7 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
                         case "11":
                             calendar.set(MONTH, 11);
                             currentMonth = calendar.get(MONTH);
-                            break;*/
+                            break;
                     }
                 }
 
@@ -336,9 +336,8 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
             calendarView = (com.applandeo.materialcalendarview.CalendarView) findViewById(R.id.calendarView);
 
             Calendar cal = Calendar.getInstance();
-            cal.set(2020, 4, 15);
+            cal.set(2020, 11, 31);
             calendarView.setMaximumDate(cal);
-
 
             Calendar cal1 = Calendar.getInstance();
             cal1.set(2019, 11, 31);
@@ -400,8 +399,8 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
 
                     Calendar clickedDate = Calendar.getInstance();
                     clickedDate.set(eventDay.getCalendar().get(YEAR), eventDay.getCalendar().get(MONTH) + 1, eventDay.getCalendar().get(DATE));
-                    Calendar maxDate = Calendar.getInstance();
-                    maxDate.set(2020, 5, 15);
+                   Calendar maxDate = Calendar.getInstance();
+                    maxDate.set(2020, 11, 31);
                     Calendar minDate = Calendar.getInstance();
                     minDate.set(2020, 1, 1);
                     if (clickedDate.after(maxDate) || clickedDate.before(minDate)) {
@@ -1112,9 +1111,9 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
 
             if(numberOfSat == 4)
             {
-                Sat.setText("सर्व शनिवार सुट्टीचे आहेत.");
+                Sat.setText("शनिवार , रविवार - सुट्टी");
             }else{
-                Sat.setText("सर्व शनिवार सुट्टीचे आहेत.");
+                Sat.setText("शनिवार , रविवार - सुट्टी");
             }
             calendarView.setEvents(events);
 
