@@ -398,7 +398,7 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
                     final String date = eventDay.getCalendar().get(DATE) + "/" + (eventDay.getCalendar().get(MONTH) + 1) + "/" + eventDay.getCalendar().get(YEAR);
 
                     Calendar clickedDate = Calendar.getInstance();
-                    clickedDate.set(eventDay.getCalendar().get(YEAR), eventDay.getCalendar().get(MONTH) + 1, eventDay.getCalendar().get(DATE));
+                    clickedDate.set(eventDay.getCalendar().get(YEAR), eventDay.getCalendar().get(MONTH), eventDay.getCalendar().get(DATE));
                    Calendar maxDate = Calendar.getInstance();
                     maxDate.set(2020, 11, 31);
                     Calendar minDate = Calendar.getInstance();
@@ -406,7 +406,6 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
                     if (clickedDate.after(maxDate) || clickedDate.before(minDate)) {
                         return;
                     }
-
                     // Toast.makeText(getApplicationContext(),date,Toast.LENGTH_LONG).show();
                     final EditText Id = mview.findViewById(R.id.txtId);
                     final EditText from = mview.findViewById(R.id.txtFrom);
