@@ -7,6 +7,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Color;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
 import android.support.v4.app.ActivityCompat;
@@ -191,13 +192,24 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
                             } else if (id == R.id.nav_share) {
                                 Intent shareIntent = new Intent(Intent.ACTION_SEND);
                                 shareIntent.setType("text/plain");
-                                shareIntent.putExtra(Intent.EXTRA_SUBJECT, "SMART Govt Calendar");
-                                String shareMessage = "\n Download SMART Govt. Calendar App by following link -  \n\n";
+                                shareIntent.putExtra(Intent.EXTRA_SUBJECT, "SMART Govt Diary");
+                                String shareMessage = "\n Download SMART Govt. Diary App by following link -  \n\n";
                                 shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=com.xdtpl.smartgovtcalender";
                                 shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
                                 startActivity(Intent.createChooser(shareIntent, "choose one"));
                                 return true;
-                            } else if (id == R.id.nav_impDoc) {
+                            }else if (id == R.id.nav_FreeToPro) {
+                                final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+                                try {
+                                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.xdtpl.smartgovtcalenderpro")));
+                                    //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+                                } catch (android.content.ActivityNotFoundException anfe) {
+                                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.xdtpl.smartgovtcalenderpro")));
+                                }
+
+                                return true;
+                            }//
+                            else if (id == R.id.nav_impDoc) {
                                 Intent intent = new Intent(MainActivity.this, ImpDocFiles.class);
                                 startActivity(intent);
                                 return true;
@@ -306,7 +318,6 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
                         case "7":
                             calendar.set(MONTH, 7);
                             currentMonth = calendar.get(MONTH);
-
                             break;
 
                         case "8":
@@ -336,11 +347,12 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
             calendarView = (com.applandeo.materialcalendarview.CalendarView) findViewById(R.id.calendarView);
 
             Calendar cal = Calendar.getInstance();
-            cal.set(2020, 11, 31);
+            cal.set(2021, 11, 31);
             calendarView.setMaximumDate(cal);
 
             Calendar cal1 = Calendar.getInstance();
-            cal1.set(2019, 11, 31);
+            cal1.set(2020, 11, 31);
+
             calendarView.setMinimumDate(cal1);
 
             calendar.set(MONTH, currentMonth);
@@ -353,8 +365,7 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
                 e.printStackTrace();
             }
 
-
-//calendarView.setWeekNumberColor(Color.RED);
+            //calendarView.setWeekNumberColor(Color.RED);
             final com.applandeo.materialcalendarview.CalendarView finalCalendarView2 = calendarView;
             calendarView.setOnPreviousPageChangeListener(new OnCalendarPageChangeListener() {
                 @Override
@@ -362,6 +373,7 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
                     currentMonth--;
                     Calendar c = Calendar.getInstance();
                     c.set(MONTH, currentMonth);
+
                     UpdateButton(c, next, back);
                     PopulateEventsOnCalendar(finalCalendarView2);
                 }
@@ -398,12 +410,14 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
                     final String date = eventDay.getCalendar().get(DATE) + "/" + (eventDay.getCalendar().get(MONTH) + 1) + "/" + eventDay.getCalendar().get(YEAR);
 
                     Calendar clickedDate = Calendar.getInstance();
-                    clickedDate.set(eventDay.getCalendar().get(YEAR), eventDay.getCalendar().get(MONTH), eventDay.getCalendar().get(DATE));
-                   Calendar maxDate = Calendar.getInstance();
-                    maxDate.set(2020, 11, 31);
+                    clickedDate.set(eventDay.getCalendar().get(YEAR), eventDay.getCalendar().get(MONTH) + 1, eventDay.getCalendar().get(DATE));
+                    Calendar maxDate = Calendar.getInstance();
+                    maxDate.set(2021, 8, 31);
                     Calendar minDate = Calendar.getInstance();
-                    minDate.set(2020, 1, 1);
+                    minDate.set(2021, 1, 1);
                     if (clickedDate.after(maxDate) || clickedDate.before(minDate)) {
+
+                        Toast.makeText(getBaseContext(), "Please Download the Pro Application!", Toast.LENGTH_LONG).show();
                         return;
                     }
                     // Toast.makeText(getApplicationContext(),date,Toast.LENGTH_LONG).show();
@@ -642,8 +656,6 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
                                         })
 
                                         .setNegativeButton(" अॅड वन मोअर", null)
-
-
                                         .setView(mview)
                                         .show();
 
@@ -914,13 +926,10 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
                                     Experiment.setText("");
 
                                     //   Rate.setText("");
-
-
                                     ((AlertDialog) mBuilder1).getButton(AlertDialog.BUTTON_NEGATIVE)
                                             .setEnabled(false);
                                     ((AlertDialog) mBuilder1).getButton(AlertDialog.BUTTON_POSITIVE)
                                             .setEnabled(false);
-
 
                                 } catch (Exception ex) {
                                     Toast.makeText(getBaseContext(), ex.getMessage(), Toast.LENGTH_LONG).show();
@@ -988,6 +997,7 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
         alertDialogBuilder.show();
     }*/
     private void UpdateButton(Calendar c, Button next1, Button prev1) {
+
         int Nmonth = ((c.get(MONTH) < 4) ? (c.get(MONTH) + 1) : 0);
         int Pmonth = ((c.get(MONTH) > 0) ? (c.get(MONTH) - 1) : 4);
         if (Pmonth == 4) {
@@ -1002,6 +1012,7 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
             next1.setVisibility(View.VISIBLE);
             next1.setText(calHelper.GetMonthName(Nmonth));
         }
+
         /*int Nmonth = ((c.get(MONTH) < 11) ? (c.get(MONTH) + 1) : 0);
         int Pmonth = ((c.get(MONTH) > 0) ? (c.get(MONTH) - 1) : 11);
         if (Pmonth == 11) {
@@ -1030,9 +1041,7 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
 
             while (data.moveToNext()) {
                 date = data.getString(1);
-
                 Date newDate = df.parse(date);
-
                 Calendar cl = Calendar.getInstance();
                 cl.setTime(newDate);
                 int day = cl.get(DATE);

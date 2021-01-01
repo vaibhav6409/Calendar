@@ -2075,7 +2075,7 @@ public class TABillPDF {
         }
 
         private Phrase footer() {
-            Phrase p = new Phrase("SMART Govt. Calendar App", fText);
+            Phrase p = new Phrase("SMART Govt. Diary App", fText);
             return p;
         }
     }

@@ -107,16 +107,16 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-        /*juneView.setOnClickListener(new View.OnClickListener() {
+        juneView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent janIntent = new Intent(HomeActivity.this, MainActivity.class);
                 janIntent.putExtra("value", 5);
                 startActivity(janIntent);
             }
-        });*/
+        });
 
-        /*julyView.setOnClickListener(new View.OnClickListener() {
+        julyView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent janIntent = new Intent(HomeActivity.this, MainActivity.class);
@@ -124,15 +124,14 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(janIntent);
             }
         });
-*/
-        /*AugView.setOnClickListener(new View.OnClickListener() {
+        AugView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent janIntent = new Intent(HomeActivity.this, MainActivity.class);
                 janIntent.putExtra("value", 7);
                 startActivity(janIntent);
             }
-        });*/
+        });
 
        /* septView.setOnClickListener(new View.OnClickListener() {
             @Override
