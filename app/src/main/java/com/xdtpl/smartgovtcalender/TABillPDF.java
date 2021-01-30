@@ -88,12 +88,11 @@ public class TABillPDF {
         if (!folder.exists())
             folder.mkdir();
         try {
-            File file = new File(Environment.getRootDirectory().toString() + File.separator + filename + ".pdf");
+            File file = new File(folder + File.separator + filename + ".pdf");
             file.createNewFile();
         } catch (IOException e) {
             e.printStackTrace();
         }
-
         pdfFile1 = new File(folder, filename + ".pdf");
     }
 
@@ -2075,7 +2074,7 @@ public class TABillPDF {
         }
 
         private Phrase footer() {
-            Phrase p = new Phrase("SMART Govt. Diary App", fText);
+            Phrase p = new Phrase("SMART Govt. Calendar App", fText);
             return p;
         }
     }

@@ -224,7 +224,7 @@ public class TABillGenerteReports extends AppCompatActivity {
         });
 
         //June View
-        /*juneview.setOnClickListener(new View.OnClickListener() {
+        juneview.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -257,9 +257,8 @@ public class TABillGenerteReports extends AppCompatActivity {
 
             }
         });
-*/
         //July View
-        /*julyView.setOnClickListener(new View.OnClickListener() {
+        julyView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -292,9 +291,8 @@ public class TABillGenerteReports extends AppCompatActivity {
 
             }
         });
-*/
         //Aug View
-       /* AugView.setOnClickListener(new View.OnClickListener() {
+        AugView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -326,7 +324,6 @@ public class TABillGenerteReports extends AppCompatActivity {
                 dialog1.show();
             }
         });
-*/
         //Sept View
        /* SeptView.setOnClickListener(new View.OnClickListener() {
             @Override

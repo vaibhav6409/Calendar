@@ -18,8 +18,11 @@ public class ContactUsActivity extends AppCompatActivity {
         final EditText editTextTo1=(EditText)findViewById(R.id.name);
         final EditText editTextSubject=(EditText)findViewById(R.id.email);
         final EditText editTextMessage=(EditText)findViewById(R.id.message);
+        final EditText editTextMobileno = (EditText)findViewById(R.id.mobileno);
+
 
         Button startBtn = (Button) findViewById(R.id.sendmail);
+
         startBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -42,11 +45,19 @@ public class ContactUsActivity extends AppCompatActivity {
                         editTextMessage.setError("Field cannot be empty");
                         isError = true;
                     }
+
+                    if (editTextMobileno.length() == 0) {
+                        editTextMobileno.requestFocus();
+                        editTextMobileno.setError("Field cannot be empty");
+                        isError = true;
+                    }
+
                 }else {
 
                 String subject=editTextSubject.getText().toString();
                 String message=editTextMessage.getText().toString();
                 String name = editTextTo1.getText().toString();
+                String mobileno = editTextMobileno.getText().toString();
 
                 String[] to = {
                         "smartinnovations9009@gmail.com"
@@ -56,7 +67,7 @@ public class ContactUsActivity extends AppCompatActivity {
                 email.setType("text/plain");
                 email.putExtra(Intent.EXTRA_EMAIL, to);
                 email.putExtra(Intent.EXTRA_SUBJECT, subject);
-                email.putExtra(Intent.EXTRA_TEXT, message+"\n"+"\n"+"---"+name);
+                email.putExtra(Intent.EXTRA_TEXT, message+"\n"+"\n"+"---"+name+"---" +mobileno );
 
                 //need this to prompts email client only
                 email.setType("message/rfc822");
@@ -66,7 +77,7 @@ public class ContactUsActivity extends AppCompatActivity {
                     editTextTo1.getText().clear();
                     editTextSubject.getText().clear();
                     editTextMessage.getText().clear();
-            }}
+                    editTextMobileno.getText().clear();            }}
         });
         }
 }

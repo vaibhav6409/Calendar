@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
     Button button;
     Button next, back;
     String date;
-    TextView holiday, holiday1, holiday2, holiday3, Sat;
+    TextView holiday, holiday1, holiday2, holiday3, holiday4, Sat;
     TextView DisplayDate;
     DrawerLayout mDrawerLayout;
     String mode[] = {"   ---", "--- ( वाहनाचा  प्रकार निवडा )", "बस", "रेल्वे", "शासकीय वाहन ", "खाजगी वाहन"};
@@ -94,17 +94,11 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
                     new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE},
                     YOUR_PERMISSION_STATIC_CODE_IDENTIFIER);
 
-
             calHelper = new CalenderHelper();
             setContentView(R.layout.activity_main);
-
-
             myDb = new DatabaseHelper(this);
-
             calendar = Calendar.getInstance();
             currentMonth = calendar.get(MONTH);
-
-
             //calendar.setFirstDayOfWeek(calendar.get(Calendar.DAY_OF_WEEK)-1);
 
             final Button next = findViewById(R.id.next);
@@ -114,6 +108,7 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
             holiday1 = findViewById(R.id.holiday1);
             holiday2 = findViewById(R.id.holiday2);
             holiday3 = findViewById(R.id.holiday3);
+            holiday4 = findViewById(R.id.holiday4);
 
             Sat = findViewById((R.id.sat));
 
@@ -132,7 +127,7 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
             mDrawerLayout = findViewById(R.id.drawer_layout);
 
             NavigationView navigationView = findViewById(R.id.nav_view);
-            navigationView.getMenu().getItem(2).setActionView(R.layout.menu_item); //Adding text at right side in menuItem
+            navigationView.getMenu().getItem(4).setActionView(R.layout.menu_item); //Adding text at right side in menuItem
 
             navigationView.setNavigationItemSelectedListener(
                     new NavigationView.OnNavigationItemSelectedListener() {
@@ -141,7 +136,15 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
                             int id = menuItem.getItemId();
                             // set item as selected to persist highlight
                             menuItem.setChecked(true);
-                            if (id == R.id.nav_profile) {
+                            if (id == R.id.nav_titlesponsors) {
+                                Intent intent = new Intent(MainActivity.this, TitleSponserActivity.class);
+                                startActivity(intent);
+                                return true;
+                            }else if (id == R.id.nav_groupsponsors) {
+                                Intent intent = new Intent(MainActivity.this, SponserActivity.class);
+                                startActivity(intent);
+                                return true;
+                            }else if (id == R.id.nav_profile) {
                                 Intent intent = new Intent(MainActivity.this, ProfileActivity.class);
                                 startActivity(intent);
                                 return true;
@@ -192,8 +195,8 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
                             } else if (id == R.id.nav_share) {
                                 Intent shareIntent = new Intent(Intent.ACTION_SEND);
                                 shareIntent.setType("text/plain");
-                                shareIntent.putExtra(Intent.EXTRA_SUBJECT, "SMART Govt Diary");
-                                String shareMessage = "\n Download SMART Govt. Diary App by following link -  \n\n";
+                                shareIntent.putExtra(Intent.EXTRA_SUBJECT, "SMART Govt Calendar");
+                                String shareMessage = "\n Download SMART Govt. Calendar App by following link -  \n\n";
                                 shareMessage = shareMessage + "https://play.google.com/store/apps/details?id=com.xdtpl.smartgovtcalender";
                                 shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
                                 startActivity(Intent.createChooser(shareIntent, "choose one"));
@@ -348,6 +351,7 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
 
             Calendar cal = Calendar.getInstance();
             cal.set(2021, 11, 31);
+
             calendarView.setMaximumDate(cal);
 
             Calendar cal1 = Calendar.getInstance();
@@ -417,7 +421,7 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
                     minDate.set(2021, 1, 1);
                     if (clickedDate.after(maxDate) || clickedDate.before(minDate)) {
 
-                        Toast.makeText(getBaseContext(), "Please Download the Pro Application!", Toast.LENGTH_LONG).show();
+                        //Toast.makeText(getBaseContext(), "Do not allowed to enter data.", Toast.LENGTH_LONG).show();
                         return;
                     }
                     // Toast.makeText(getApplicationContext(),date,Toast.LENGTH_LONG).show();
@@ -998,9 +1002,9 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
     }*/
     private void UpdateButton(Calendar c, Button next1, Button prev1) {
 
-        int Nmonth = ((c.get(MONTH) < 4) ? (c.get(MONTH) + 1) : 0);
-        int Pmonth = ((c.get(MONTH) > 0) ? (c.get(MONTH) - 1) : 4);
-        if (Pmonth == 4) {
+        int Nmonth = ((c.get(MONTH) < 11) ? (c.get(MONTH) + 1) : 0);
+        int Pmonth = ((c.get(MONTH) > 0) ? (c.get(MONTH) - 1) : 11);
+        if (Pmonth == 11) {
             prev1.setVisibility(View.GONE);
         } else {
             prev1.setVisibility(View.VISIBLE);
@@ -1057,7 +1061,7 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
             holiday1.setText("");
             holiday2.setText("");
             holiday3.setText("");
-
+            holiday4.setText("");
 
             for (int i = 0; i < holidays.size(); i++) {
 
@@ -1074,6 +1078,9 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
 
                 } else if (i == 3) {
                     holiday3.setText(holidays.get(i).HolidayText);
+
+                }else if (i == 4) {
+                    holiday4.setText(holidays.get(i).HolidayText);
 
                 }
             }
