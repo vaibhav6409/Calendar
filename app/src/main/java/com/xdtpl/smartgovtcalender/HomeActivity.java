@@ -19,7 +19,7 @@ public class HomeActivity extends AppCompatActivity {
     CardView mayView;
     CardView juneView;
     CardView julyView;
-    CardView AugView;
+    CardView augView;
     CardView septView;
     CardView octView;
     CardView novView;
@@ -51,7 +51,7 @@ public class HomeActivity extends AppCompatActivity {
         mayView = findViewById(R.id.may);
         juneView = findViewById(R.id.june);
         julyView = findViewById(R.id.july);
-        AugView = findViewById(R.id.Aug);
+        augView = findViewById(R.id.Aug);
         septView = findViewById(R.id.Sept);
         octView = findViewById(R.id.Oct);
         novView = findViewById(R.id.Nov);
@@ -98,6 +98,7 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(janIntent);
             }
         });
+
         mayView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -124,7 +125,8 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(janIntent);
             }
         });
-        AugView.setOnClickListener(new View.OnClickListener() {
+
+        augView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent janIntent = new Intent(HomeActivity.this, MainActivity.class);
@@ -133,16 +135,16 @@ public class HomeActivity extends AppCompatActivity {
             }
         });
 
-       /* septView.setOnClickListener(new View.OnClickListener() {
+        septView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent janIntent = new Intent(HomeActivity.this, MainActivity.class);
                 janIntent.putExtra("value", 8);
                 startActivity(janIntent);
             }
-        });*/
+        });
 
-       /* octView.setOnClickListener(new View.OnClickListener() {
+        octView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent janIntent = new Intent(HomeActivity.this, MainActivity.class);
@@ -150,24 +152,24 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(janIntent);
             }
         });
-*/
-        /*novView.setOnClickListener(new View.OnClickListener() {
+
+        novView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent janIntent = new Intent(HomeActivity.this, MainActivity.class);
                 janIntent.putExtra("value", 10);
                 startActivity(janIntent);
             }
-        });*/
+        });
 
-        /*decView.setOnClickListener(new View.OnClickListener() {
+        decView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent janIntent = new Intent(HomeActivity.this, MainActivity.class);
                 janIntent.putExtra("value", 11);
                 startActivity(janIntent);
             }
-        });*/
+        });
 
         diary.setOnClickListener(new View.OnClickListener() {
             @Override

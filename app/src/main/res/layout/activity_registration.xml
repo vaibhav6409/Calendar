@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegistrationActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        android:background="@drawable/customborder"
+        android:layout_margin="10dp">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="महाराष्ट्र शासन दिनदर्शिका"
+        android:textSize="25dp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:textAlignment="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="रेजिस्ट्रेशन करा"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textAlignment="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <EditText
+            android:id="@+id/name"
+            android:drawableRight="@drawable/ic_account_circle_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="  पूर्ण नाव "/>
+        <EditText
+            android:id="@+id/work"
+            android:drawableRight="@drawable/ic_account_balance_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="  कार्यालयाचे नाव "
+            android:layout_marginTop="5dp"/>
+        <EditText
+            android:id="@+id/desig"
+            android:drawableRight="@drawable/ic_work_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="  पदनाम"
+            android:layout_marginTop="5dp"/>
+    <!--    <EditText
+            android:drawableLeft="@drawable/ic_phone_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="  फोन नंबर"
+            android:layout_marginTop="5dp"/>-->
+        <EditText
+            android:id="@+id/mail"
+            android:drawableRight="@drawable/ic_email_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="  ई मेल"
+            android:layout_marginTop="5dp"
+            android:inputType="textEmailAddress"/>
+        <EditText
+            android:id="@+id/pass"
+            android:drawableRight="@drawable/ic_remove_red_eye_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="  पासवर्ड"
+            android:layout_marginTop="5dp"
+            android:inputType="textPassword"/>
+        <EditText
+            android:id="@+id/conpass"
+            android:drawableRight="@drawable/ic_remove_red_eye_black_24dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="  कन्फर्म पासवर्ड"
+            android:layout_marginTop="5dp"
+            android:inputType="textPassword"/>
+        <Button
+            android:id="@+id/register"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:layout_marginTop="10dp"
+            android:text="रजिस्टर करा"
+            android:textStyle="bold"
+            android:textSize="15dp"
+            android:background="@drawable/buttonbackground"
+            android:textColor="#ffff"/>
+        <TextView
+            android:id="@+id/log"
+            android:textAlignment="center"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="लॉगिन करा"
+            android:textStyle="bold"/>
+    </LinearLayout>
+
+</LinearLayout>

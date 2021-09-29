@@ -62,7 +62,7 @@ public class Medicalbill extends AppCompatActivity {
 
                 if (pin.length() == 0) {
                     pin.requestFocus();
-                    pin.setError("Please enter your are pincode");
+                    pin.setError("Please enter your area pincode");
                     isError = true;
                 }
 

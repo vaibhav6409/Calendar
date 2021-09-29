@@ -36,8 +36,7 @@ public class GooglePlayStoreAppVersionNameLoader extends AsyncTask<String, Void,
             if (isNetworkAvailable(mContext)) {
                 mStringCheckUpdate = Jsoup.connect("https://play.google.com/store/apps/details?id="+mContext.getPackageName())
                         .timeout(30000)
-                        .userAgent("Mozilla/5.0 (Windows; U; WindowsNT 5.1; en-US; rv1.8.1.6) Gecko/20070725 Firefox/2.0.0.6")
-                        .referrer("http://www.google.com")
+                        .userAgent("Mozilla/5.0 (Windows; U; WindowsNT 5.1; en-US; rv1.8.1.6) Gecko/20070725 Firefox/2.0.0.6").referrer("http://www.google.com")
                         .get()
                         .select(".hAyfc .htlgb")
                         .get(7)

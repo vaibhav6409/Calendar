@@ -189,7 +189,7 @@ public class CalenderHelper {
             Calendar cl4 = Calendar.getInstance();
             cl4.set(2021, 4, 1);
             cd4.HoildayDate = cl4;
-            cd4.HolidayText = "1 महाराष्ट्र दिन";
+            cd4.HolidayText = "\n1 महाराष्ट्र दिन";
             cd4.HolidayText1 = " महाराष्ट्र दिन";
             events.add(cd4);
 
@@ -197,7 +197,7 @@ public class CalenderHelper {
             Calendar cl5 = Calendar.getInstance();
             cl5.set(2021, 4, 13);
             cd5.HoildayDate = cl5;
-            cd5.HolidayText = "13 रमझान ईद ";
+            cd5.HolidayText = "\n13 रमझान ईद ";
             cd5.HolidayText1 = " रमझान ईद ";
             events.add(cd5);
 
@@ -205,7 +205,7 @@ public class CalenderHelper {
             Calendar cl44 = Calendar.getInstance();
             cl44.set(2021, 4, 26);
             cd44.HoildayDate = cl44;
-            cd44.HolidayText = "26 बुद्ध पौर्णिमा ";
+            cd44.HolidayText = "\n26 बुद्ध पौर्णिमा ";
             cd44.HolidayText1 = " बुद्ध पौर्णिमा ";
             events.add(cd44);
 
@@ -239,7 +239,7 @@ public class CalenderHelper {
             Calendar cl7 = Calendar.getInstance();
             cl7.set(2021, 7, 15);
             cd7.HoildayDate = cl7;
-            cd7.HolidayText = "15 स्वातंत्र्य दिवस";
+            cd7.HolidayText = "\n15 स्वातंत्र्य दिवस";
             cd7.HolidayText1 = " स्वातंत्र्य दिवस";
             events.add(cd7);
 
@@ -247,7 +247,7 @@ public class CalenderHelper {
             Calendar cl777 = Calendar.getInstance();
             cl777.set(2021, 7, 16);
             cd777.HoildayDate = cl777;
-            cd777.HolidayText = "16 पारशी नववर्ष ";
+            cd777.HolidayText = "\n16 पारशी नववर्ष ";
             cd777.HolidayText1 = " पारशी नववर्ष ";
             events.add(cd777);
 
@@ -255,7 +255,7 @@ public class CalenderHelper {
             Calendar cl77777 = Calendar.getInstance();
             cl77777.set(2021, 7, 19);
             cd77777.HoildayDate = cl77777;
-            cd77777.HolidayText = "19 मोहरम";
+            cd77777.HolidayText = "\n19 मोहरम";
             cd77777.HolidayText1 = " मोहरम ";
             events.add(cd77777);
 
@@ -270,7 +270,7 @@ public class CalenderHelper {
             */
         }
         //Sept
-       /* if(month == 8 || month==AllMonth) {
+        if(month == 8 || month==AllMonth) {
             CDate cd7777 = new CDate();
             Calendar cl7777 = Calendar.getInstance();
             cl7777.set(2021, 8, 10);
@@ -302,18 +302,10 @@ public class CalenderHelper {
             Calendar cl10 = Calendar.getInstance();
             cl10.set(2021, 9, 19);
             cd10.HoildayDate = cl10;
-            cd10.HolidayText = " 19 ईद-ए -मिलाद";
+            cd10.HolidayText = "19 ईद-ए -मिलाद";
             cd10.HolidayText1 = "  ईद-ए -मिलाद";
             events.add(cd10);
 
-
-           *//* CDate cd99999 = new CDate();
-             Calendar cl99999 = Calendar.getInstance();
-             cl99999.set(2019, 9, 29);
-             cd99999.HoildayDate = cl99999;
-             cd99999.HolidayText = "29 भाऊबीज ";
-             cd99999.HolidayText1 = " भाऊबीज ";
-             events.add(cd99999);*//*
         }
         //Nov
         if(month == 10 || month==AllMonth) {
@@ -321,7 +313,7 @@ public class CalenderHelper {
             Calendar cl999 = Calendar.getInstance();
             cl999.set(2021, 10, 4);
             cd999.HoildayDate = cl999;
-            cd999.HolidayText = " 4 लक्ष्मीपूजन ";
+            cd999.HolidayText = "4 लक्ष्मीपूजन ";
             cd999.HolidayText1 = "  लक्ष्मीपूजन ";
             events.add(cd999);
 
@@ -333,19 +325,11 @@ public class CalenderHelper {
             cd9999.HolidayText1 = " बलिप्रतिपदा";
             events.add(cd9999);
 
-             *//*CDate cd99999 = new CDate();
-             Calendar cl99999 = Calendar.getInstance();
-             cl99999.set(2020, 10, 16);
-             cd99999.HoildayDate = cl99999;
-             cd99999.HolidayText = "16 भाऊबीज ";
-             cd99999.HolidayText1 = " भाऊबीज ";
-             events.add(cd99999);*//*
-
             CDate cd100 = new CDate();
             Calendar cl100 = Calendar.getInstance();
             cl100.set(2021, 10, 19);
             cd100.HoildayDate = cl100;
-            cd100.HolidayText = " 19 गुरुनानक जयंती";
+            cd100.HolidayText = "19 गुरुनानक जयंती";
             cd100.HolidayText1 = "  गुरुनानक जयंती";
             events.add(cd100);
         }
@@ -358,7 +342,7 @@ public class CalenderHelper {
             cd11.HolidayText = "25 ख्रिसमस ";
             cd11.HolidayText1 = " ख्रिसमस ";
             events.add(cd11);
-        }*/
+        }
         return  events;
 
     }

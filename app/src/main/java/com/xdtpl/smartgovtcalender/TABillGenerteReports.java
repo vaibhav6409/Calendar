@@ -22,7 +22,9 @@ public class TABillGenerteReports extends AppCompatActivity {
     CardView julyView;
     CardView AugView;
     CardView SeptView;
-    CardView OctView , NovView , DecView;
+    CardView OctView;
+    CardView NovView;
+    CardView DecView;
 
     DatabaseHelper mydb;
     Registration Remodel;
@@ -239,10 +241,10 @@ public class TABillGenerteReports extends AppCompatActivity {
                         }
                         else {
                             Intent janIntent = new Intent(TABillGenerteReports.this, TABillActivity.class);
-                            janIntent.putExtra("startDate", "1/6/2020");
-                            janIntent.putExtra("endDate", "30/6/2020");
-                            janIntent.putExtra("filename", "TABill_June2020");
-                            janIntent.putExtra("month", "जून 2020");
+                            janIntent.putExtra("startDate", "1/6/2021");
+                            janIntent.putExtra("endDate", "30/6/2021");
+                            janIntent.putExtra("filename", "TABill_June2021");
+                            janIntent.putExtra("month", "जून 2021");
                             startActivity(janIntent);
                         }
                     }
@@ -273,10 +275,10 @@ public class TABillGenerteReports extends AppCompatActivity {
                         }
                         else {
                             Intent janIntent = new Intent(TABillGenerteReports.this, TABillActivity.class);
-                            janIntent.putExtra("startDate", "1/7/2020");
-                            janIntent.putExtra("endDate", "31/7/2020");
-                            janIntent.putExtra("filename", "TABill_July2020");
-                            janIntent.putExtra("month", "जुलै 2020");
+                            janIntent.putExtra("startDate", "1/7/2021");
+                            janIntent.putExtra("endDate", "31/7/2021");
+                            janIntent.putExtra("filename", "TABill_July2021");
+                            janIntent.putExtra("month", "जुलै 2021");
                             startActivity(janIntent);
                         }
                     }
@@ -307,10 +309,10 @@ public class TABillGenerteReports extends AppCompatActivity {
                         }
                         else {
                             Intent janIntent = new Intent(TABillGenerteReports.this, TABillActivity.class);
-                            janIntent.putExtra("startDate", "1/8/2020");
-                            janIntent.putExtra("endDate", "31/8/2020");
-                            janIntent.putExtra("filename", "TABill_Aug2020");
-                            janIntent.putExtra("month", "ऑगस्ट 2020");
+                            janIntent.putExtra("startDate", "1/8/2021");
+                            janIntent.putExtra("endDate", "31/8/2021");
+                            janIntent.putExtra("filename", "TABill_Aug2021");
+                            janIntent.putExtra("month", "ऑगस्ट 2021");
                             startActivity(janIntent);
                         }
                     }
@@ -325,7 +327,7 @@ public class TABillGenerteReports extends AppCompatActivity {
             }
         });
         //Sept View
-       /* SeptView.setOnClickListener(new View.OnClickListener() {
+        SeptView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -340,10 +342,10 @@ public class TABillGenerteReports extends AppCompatActivity {
                         }
                         else {
                             Intent janIntent = new Intent(TABillGenerteReports.this, TABillActivity.class);
-                            janIntent.putExtra("startDate", "1/9/2020");
-                            janIntent.putExtra("endDate", "30/9/2020");
-                            janIntent.putExtra("filename", "TABill_Sept2020");
-                            janIntent.putExtra("month", "सप्टेंबर 2020");
+                            janIntent.putExtra("startDate", "1/9/2021");
+                            janIntent.putExtra("endDate", "30/9/2021");
+                            janIntent.putExtra("filename", "TABill_Sept2021");
+                            janIntent.putExtra("month", "सप्टेंबर 2021");
                             startActivity(janIntent);
                         }
                     }
@@ -357,9 +359,9 @@ public class TABillGenerteReports extends AppCompatActivity {
                 dialog1.show();
             }
         });
-*/
+
         //Oct View
-        /*OctView.setOnClickListener(new View.OnClickListener() {
+        OctView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -374,10 +376,10 @@ public class TABillGenerteReports extends AppCompatActivity {
                         }
                         else {
                             Intent janIntent = new Intent(TABillGenerteReports.this, TABillActivity.class);
-                            janIntent.putExtra("startDate", "1/10/2020");
-                            janIntent.putExtra("endDate", "31/10/2020");
-                            janIntent.putExtra("filename", "TABill_Oct2020");
-                            janIntent.putExtra("month", "ऑक्टोबर 2020");
+                            janIntent.putExtra("startDate", "1/10/2021");
+                            janIntent.putExtra("endDate", "31/10/2021");
+                            janIntent.putExtra("filename", "TABill_Oct2021");
+                            janIntent.putExtra("month", "ऑक्टोबर 2021");
                             startActivity(janIntent);
                         }
                     }
@@ -391,9 +393,9 @@ public class TABillGenerteReports extends AppCompatActivity {
                 dialog1.show();
             }
         });
-*/
+
         //Nov view
-       /* NovView.setOnClickListener(new View.OnClickListener() {
+        NovView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -408,10 +410,10 @@ public class TABillGenerteReports extends AppCompatActivity {
                         }
                         else {
                             Intent janIntent = new Intent(TABillGenerteReports.this, TABillActivity.class);
-                            janIntent.putExtra("startDate", "1/11/2020");
-                            janIntent.putExtra("endDate", "30/11/2020");
-                            janIntent.putExtra("filename", "TABill_Nov2020");
-                            janIntent.putExtra("month", "नोव्हेंबर 2020");
+                            janIntent.putExtra("startDate", "1/11/2021");
+                            janIntent.putExtra("endDate", "30/11/2021");
+                            janIntent.putExtra("filename", "TABill_Nov2021");
+                            janIntent.putExtra("month", "नोव्हेंबर 2021");
                             startActivity(janIntent);
                         }
                     }
@@ -425,9 +427,9 @@ public class TABillGenerteReports extends AppCompatActivity {
                 dialog1.show();
             }
         });
-*/
+
         //Dec View
-       /* DecView.setOnClickListener(new View.OnClickListener() {
+        DecView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -442,10 +444,10 @@ public class TABillGenerteReports extends AppCompatActivity {
                         }
                         else {
                             Intent janIntent = new Intent(TABillGenerteReports.this, TABillActivity.class);
-                            janIntent.putExtra("startDate", "1/12/2020");
-                            janIntent.putExtra("endDate", "31/12/2020");
-                            janIntent.putExtra("filename", "TABill_Dec2020");
-                            janIntent.putExtra("month", "डिसेंबर 2020");
+                            janIntent.putExtra("startDate", "1/12/2021");
+                            janIntent.putExtra("endDate", "31/12/2021");
+                            janIntent.putExtra("filename", "TABill_Dec2021");
+                            janIntent.putExtra("month", "डिसेंबर 2021");
                             startActivity(janIntent);
                         }
                     }
@@ -458,6 +460,6 @@ public class TABillGenerteReports extends AppCompatActivity {
                 });
                 dialog1.show();
             }
-        });*/
+        });
     }
 }

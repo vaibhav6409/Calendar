@@ -137,11 +137,11 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
                             // set item as selected to persist highlight
                             menuItem.setChecked(true);
                             if (id == R.id.nav_titlesponsors) {
-                                Intent intent = new Intent(MainActivity.this, TitleSponserActivity.class);
+                                Intent intent = new Intent(MainActivity.this, TitleSponsorActivity.class);
                                 startActivity(intent);
                                 return true;
                             }else if (id == R.id.nav_groupsponsors) {
-                                Intent intent = new Intent(MainActivity.this, SponserActivity.class);
+                                Intent intent = new Intent(MainActivity.this, SponsorActivity.class);
                                 startActivity(intent);
                                 return true;
                             }else if (id == R.id.nav_profile) {
@@ -201,17 +201,18 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
                                 shareIntent.putExtra(Intent.EXTRA_TEXT, shareMessage);
                                 startActivity(Intent.createChooser(shareIntent, "choose one"));
                                 return true;
-                            }else if (id == R.id.nav_FreeToPro) {
-                                final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
-                                try {
-                                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.xdtpl.smartgovtcalenderpro")));
-                                    //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
-                                } catch (android.content.ActivityNotFoundException anfe) {
-                                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.xdtpl.smartgovtcalenderpro")));
-                                }
-
-                                return true;
-                            }//
+                            }
+//                            else if (id == R.id.nav_FreeToPro) {
+//                                final String appPackageName = getPackageName(); // getPackageName() from Context or Activity object
+//                                try {
+//                                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.xdtpl.smartgovtcalenderpro")));
+//                                    //startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://details?id=" + appPackageName)));
+//                                } catch (android.content.ActivityNotFoundException anfe) {
+//                                    startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/details?id=com.xdtpl.smartgovtcalenderpro")));
+//                                }
+//
+//                                return true;
+//                            }//
                             else if (id == R.id.nav_impDoc) {
                                 Intent intent = new Intent(MainActivity.this, ImpDocFiles.class);
                                 startActivity(intent);
@@ -416,7 +417,7 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
                     Calendar clickedDate = Calendar.getInstance();
                     clickedDate.set(eventDay.getCalendar().get(YEAR), eventDay.getCalendar().get(MONTH) + 1, eventDay.getCalendar().get(DATE));
                     Calendar maxDate = Calendar.getInstance();
-                    maxDate.set(2021, 8, 31);
+                    maxDate.set(2021, 12, 31);
                     Calendar minDate = Calendar.getInstance();
                     minDate.set(2021, 1, 1);
                     if (clickedDate.after(maxDate) || clickedDate.before(minDate)) {

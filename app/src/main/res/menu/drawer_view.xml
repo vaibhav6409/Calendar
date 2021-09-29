@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_titlesponsors"
+            android:icon="@drawable/sponser"
+            android:title="शीर्षक प्रायोजक" />
+
+        <item
+            android:id="@+id/nav_groupsponsors"
+            android:icon="@drawable/sponser"
+            android:title="ग्रुप प्रायोजक" />
+
+        <item
+            android:id="@+id/nav_profile"
+            android:icon="@drawable/ic_assignment"
+            android:title="माझे प्रोफाइल" />
+
+        <item
+            android:id="@+id/nav_holiday"
+            android:icon="@drawable/ic_view_list"
+            android:title="सरकारी सुट्ट्या" />
+
+        <item
+            android:id="@+id/nav_medicalbill"
+            android:icon="@drawable/ic_filter"
+            android:title="मेडिकल बिल" />
+        <item
+            android:id="@+id/nav_payment"
+            android:icon="@drawable/ic_payment"
+            android:title=" डोनेशन/देणगी "
+            android:visible="false"
+            />
+
+        <item
+            android:id="@+id/nav_diary"
+            android:icon="@drawable/ic_picture"
+            android:title="टूर डायरी नमुना अहवाल" />
+
+        <item
+            android:id="@+id/nav_generate"
+            android:icon="@drawable/ic_picture"
+            android:title="टूर डायरी अहवाल तयार करा" />
+
+        <item
+            android:id="@+id/nav_bill"
+            android:icon="@drawable/ic_picture"
+            android:title="टीए बिल नमुना अहवाल" />
+
+        <item
+            android:id="@+id/nav_billgenerate"
+            android:icon="@drawable/ic_picture"
+            android:title="टीए बिल अहवाल तयार करा" />
+
+        <item
+            android:id="@+id/nav_impDoc"
+            android:icon="@drawable/ic_filter"
+            android:title="महत्वाचे शासन निर्णय / IMP Doc " />
+
+        <item
+            android:id="@+id/nav_share"
+            android:icon="@drawable/ic_share_black_24dp"
+            android:title="अँप शेअर करा" />
+
+        <item
+            android:id="@+id/nav_contact"
+            android:icon="@drawable/ic_contact"
+            android:title=" संपर्क करा " />
+
+        <item
+            android:id="@+id/nav_link"
+            android:icon="@drawable/ic_link"
+            android:title="वेब लिंक" />
+
+        <item
+            android:id="@+id/nav_user"
+        android:icon="@drawable/ic_filter"
+        android:title=" अँप विषयी थोडक्यात " />
+
+    </group>
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hunry" />
+</menu>

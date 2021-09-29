@@ -1,0 +1,102 @@
+<resources>
+    <string name="app_name">SMART Govt Calendar</string>
+
+    <string name="material_calendar_sunday">रवि</string>
+    <string name="material_calendar_monday">सोम</string>
+    <string name="material_calendar_tuesday">मंगल</string>
+    <string name="material_calendar_wednesday">बुध</string>
+    <string name="material_calendar_thursday">गुरु</string>
+    <string name="material_calendar_friday">शुक्र</string>
+    <string name="material_calendar_saturday">शनि</string>
+
+
+    <string name="firststlink">https://www.maharashtra.gov.in
+        <a style='text-decoration:none' href="https://www.maharashtra.gov.in"></a>
+    </string>
+    <string name="secondlink">https://sarkariyojana.com/maharashtra/
+    <a style='text-decoration:none' href="https://sarkariyojana.com/maharashtra/">
+    </a></string>
+    <string name="thirdlink">https://maharashtratimes.indiatimes.com
+        <a href="https://maharashtratimes.indiatimes.com"></a></string>
+    <string name="fourthlink">http://www.mahafood.gov.in
+        <a href="http://www.mahafood.gov.in"></a></string>
+    <string name="fifthlink">https://www.facebook.com/SMART-Govt-Calendar-App-383300518896141
+        <a href="https://www.facebook.com/SMART-Govt-Calendar-App-383300518896141/?modal=admin_todo_tour"></a></string>
+    <string name="sixthlink">https://aaplesarkar.maharashtra.gov.in
+        <a href="https://aaplesarkar.maharashtra.gov.in"></a></string>
+    <string name="seventhlink">https://www.maharashtra.gov.in/1145/Government-Resolutions
+        <a href="https://www.maharashtra.gov.in/1145/Government-Resolutions"></a></string>
+    <string name="eighthlink">https://maharashtra.etenders.in
+        <a href="https://maharashtra.etenders.in"></a></string>
+    <string name="ninethlink">https://www.india.gov.in
+        <a href="https://www.india.gov.in"></a></string>
+    <string name="tenthlink">https://www.mygov.in
+        <a href="https://www.mygov.in"></a></string>
+    <string name="eleventhlink">https://digilocker.gov.in
+        <a href="https://digilocker.gov.in"></a></string>
+    <string name="twelethlink">https://www.mpsc.gov.in
+        <a href="https://www.mpsc.gov.in"></a></string>
+    <string name="thirteenlink">https://www.mahaonline.gov.in
+        <a href="https://www.mahaonline.gov.in"></a></string>
+    <string name="fourteenlink">http://www.sanjayghodawatuniversity.ac.in
+        <a href="https://www.mahapariksha.gov.in"></a></string>
+    <string name="fifteenlink">http://www.sanjayghodawatuniversity.ac.in
+        <a href="http://www.sanjayghodawatuniversity.ac.in/"></a></string>
+    <string name="sixteenlink">http://xdtpl.com
+        <a href="http://xdtpl.com/"></a></string>
+    <string name="seventeen">https://www.mahapariksha.gov.in
+        <a href="https://www.mahapariksha.gov.in"></a></string>
+    <string name="linkname"></string>
+
+    <string name="link">https://drive.google.com/folderview?id=1S2waaVkGEj9XT1D8TSXARukMXYe5qA2u
+        <a href="https://drive.google.com/folderview?id=1S2waaVkGEj9XT1D8TSXARukMXYe5qA2u"></a>
+
+    </string>
+
+    <!--https://drive.google.com/folderview?id=1S2waaVkGEj9XT1D8TSXARukMXYe5qA2u-->
+    <array name="material_calendar_months_array">
+        <item>जानेवारी</item>
+        <item>फेब्रुवारी</item>
+        <item>मार्च</item>
+        <item>एप्रिल</item>
+        <item>मे</item>
+        <item>जून</item>
+        <item>जुलै</item>
+        <item>ऑगस्ट</item>
+        <item>सप्टेंबर</item>
+        <item>ऑक्टोबर</item>
+        <item>नोव्हेंबर</item>
+        <item>डिसेंबर</item>
+    </array>
+
+
+    <string name="note">Note: Version Update 1 May 2021 (महाराष्ट्र दिन) and </string>
+    <string name="note1">15 August 2021 (स्वातंत्र्य दिवस)</string>
+
+    <string name="donation">आपणास जर हे App आवडले असेल, तर प्रोत्साहनपर देणगी (voluntary contribution) देऊन या उपक्रमास आपण पाठिंबा देऊ शकता.</string>
+    <string name="donationFooter">Note:- आपण दिलेल्या देणगीचा काही हिस्सा हा सामाजिक उपक्रम/लोकहितासाठी वापरला जाईल.</string>
+
+
+    <string name="heading">SMART Govt Calendar App विषयी माहिती व हे App कसे वापरावे...</string>
+    <string name="first">1. "SMART Govt Calendar" हे App Play Store वर उपलब्ध आहे.</string>
+    <string name="second">2. एकदा डाउनलोड(Download) केल्यानंतर हे App वापरण्यासाठी इंटरनेट(Net) ची गरज नाही म्हणजेच हे पूर्णपणे Offline App आहे.</string>
+    <string name="third">3. App ची वैशिष्ट्ये:-</string>
+    <string name="third1">i. माझे प्रोफाइल</string>
+    <string name="third2">ii. सरकारी सुट्टया</string>
+    <string name="third3">iii. प्रत्येक दिवसाचे कामाचे नियोजन टिप्पणी/तपशील भरणे.</string>
+    <string name="third4">iv. स्वतःची मासिक दैनंदिनी/टूर डायरी अहवाल तयार करणे.</string>
+    <string name="third5">v. प्रवास भत्ता देयक/टीए बिल अहवाल तयार करणे.</string>
+    <string name="third6">vi. शासनाची महत्त्वाची संकेतस्थळे (वेब लिंक) All-in-one place.
+(e.g. आपले सरकार, शासन निर्णय, डिजि-लॉकर, एमपीएससी etc.)</string>
+    <string name="fourth">4. जर हे App Update केले तर यामध्ये भरलेली माहिती बॅकअप करून ठेवावी, कारण हे Offline App असल्याने भरलेली माहिती फक्त तुमच्या मोबाईलवरच सेव्ह/जतन होते.</string>
+    <string name="five">5. आपण तयार केलेले टूर डायरी अहवाल व टीए बिल अहवाल हे Download Manager येथे Pdf format व Excel format मध्ये सेव्ह होतात, याची कृपया नोंद घ्यावी.</string>
+    <string name="six">6. महाराष्ट्र शासनाचे अधिकारी व कर्मचारी यांचे कामाचे नियोजन, वेळेचं नियोजन तसेच निर्णयक्षमता, कार्यक्षमता  वृध्दिंगत होण्याच्या दृष्टीने हे अँप तयार करण्यात आलेले आहे.</string>
+    <string name="seven">7. हे अँप पूर्णपणे मराठी भाषेत असून, महाराष्ट्राचे सामान्य नागरिक सुध्दा ह्या अँपचा "डिजिटल वार्षिक दैनंदिनी" म्हणून वापर करू शकतात.</string>
+
+
+    <string name="app_upto_date">This is Updated Version</string>
+    <string name="Paragraph"> आपणास जर मेडिकल बिलासंबंधी अधिक मार्गदर्शन हवे असल्यास खालील माहिती भरून पाठवा,
+        आम्ही आपणास मेल/फोन द्वारे संपर्क करू, धन्यवाद.  </string>
+
+
+</resources>

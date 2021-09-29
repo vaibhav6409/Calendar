@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Atharv/Smart Calendar/Smart Calendar/app/src/main/res/drawable/customborder.xml" value="0.1125" />
+        <entry key="..\:/Atharv/Smart Calendar/Smart Calendar/app/src/main/res/drawable/smartlogo2021.xml" value="0.1125" />
+        <entry key="..\:/Atharv/Smart Calendar/Smart Calendar/app/src/main/res/layout-mr-rIN/activity_main.xml" value="0.18" />
+        <entry key="..\:/Atharv/Smart Calendar/Smart Calendar/app/src/main/res/layout/activity_donation.xml" value="0.12" />
+        <entry key="..\:/Atharv/Smart Calendar/Smart Calendar/app/src/main/res/layout/activity_holidays_list.xml" value="0.1" />
+        <entry key="..\:/Atharv/Smart Calendar/Smart Calendar/app/src/main/res/layout/activity_home.xml" value="0.33" />
+        <entry key="..\:/Atharv/Smart Calendar/Smart Calendar/app/src/main/res/layout/activity_list.xml" value="0.12" />
+        <entry key="..\:/Atharv/Smart Calendar/Smart Calendar/app/src/main/res/layout/activity_splash_window.xml" value="0.1" />
+        <entry key="..\:/Atharv/Smart Calendar/Smart Calendar/app/src/main/res/layout/activity_sponsers.xml" value="0.13269927536231885" />
+        <entry key="..\:/Atharv/Smart Calendar/Smart Calendar/app/src/main/res/layout/activity_tabill.xml" value="0.1" />
+        <entry key="..\:/Atharv/Smart Calendar/Smart Calendar/app/src/main/res/layout/activity_tabill_generte_reports.xml" value="0.1" />
+        <entry key="..\:/Atharv/Smart Calendar/Smart Calendar/app/src/main/res/layout/activity_view_pdf.xml" value="0.12" />
+        <entry key="..\:/Atharv/Smart Calendar/Smart Calendar/app/src/main/res/layout/button_layout.xml" value="0.1" />
+        <entry key="..\:/Atharv/Smart Calendar/Smart Calendar/app/src/main/res/layout/dialod_event.xml" value="0.1" />
+        <entry key="..\:/Atharv/Smart Calendar/Smart Calendar/app/src/main/res/layout/menu_item.xml" value="0.1" />
+        <entry key="..\:/Atharv/Smart Calendar/Smart Calendar/app/src/main/res/menu/drawer_view.xml" value="0.25" />
+        <entry key="..\:/Atharv/Smart Calendar/Smart Calendar/app/src/main/res/menu/menu_main.xml" value="0.12" />
+        <entry key="..\:/Atharv/Smart Calendar/Smart Calendar/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.11197916666666667" />
+        <entry key="..\:/Atharv/Smart Calendar/Smart Calendar/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml" value="0.11197916666666667" />
+        <entry key="..\:/Atharv/Smart Calendar1/Smart Calendar/Smart Calendar/app/src/main/res/layout/activity_tabill.xml" value="0.1" />
+        <entry key="..\:/Atharv/Smart Calendar1/Smart Calendar/Smart Calendar/app/src/main/res/layout/activity_tabill_generte_reports.xml" value="0.14" />
+        <entry key="..\:/Atharv/Smart Calendar1/Smart Calendar/Smart Calendar/app/src/main/res/menu/drawer_view.xml" value="0.1921875" />
+        <entry key="..\:/Atharv/Smart Calendar1/Smart Calendar/Smart Calendar/app/src/main/res/menu/menu_main.xml" value="0.1921875" />
+        <entry key="..\:/Repository/Smart_Calendar/app/src/main/res/layout/activity_home.xml" value="0.11955420466058764" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>

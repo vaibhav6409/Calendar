@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReportActivity"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="30sp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="माझे प्रोफाइल"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:textColor="@color/colorPrimary"
+        android:gravity="center"
+        android:inputType="text"/>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/edd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:inputType="text"/>
+    <EditText
+        android:id="@+id/ed11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="20dp"
+        android:hint="नाव"
+        android:inputType="text"/>
+
+    <EditText
+    android:id="@+id/ed22"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:layout_marginTop="10dp"
+    android:hint="पदनाम"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/ed3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:hint="कार्यालयाचे नाव"
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/ed4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:hint="मुख्यालय "
+        android:inputType="text"/>
+
+    <EditText
+        android:id="@+id/ed5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_marginTop="10dp"
+        android:hint="मूळ वेतन "
+        android:inputType="number"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginRight="20sp">
+        <Button
+            android:id="@+id/edit"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:text="सेव करा "
+            android:background="@color/colorPrimary"
+            android:textColor="@color/White"
+            android:textSize="15dp"
+            />
+
+<!--<Button
+    android:id="@+id/save"
+    android:layout_width="wrap_content"
+    android:layout_height="35dp"
+    android:text="सेव"
+    android:background="@color/colorPrimary"
+    android:textColor="@color/White"
+    android:textSize="15dp"
+    android:layout_marginStart="10dp"
+    />-->
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
