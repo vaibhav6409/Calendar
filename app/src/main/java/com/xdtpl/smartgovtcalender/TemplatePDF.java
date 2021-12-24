@@ -79,16 +79,15 @@ public class TemplatePDF {
     private void createFile(String filename) {
         File folder = new File(Environment.getExternalStorageDirectory() + "/Download/Calendar/");
         if (!folder.exists())
-            //File folder = new File(Environment.getExternalStorageDirectory() + "/Download/PDF/");
             folder.mkdir();
         try {
-            File file = new File(Environment.getRootDirectory().toString() + File.separator + filename + ".pdf");
+            File file = new File( filename + ".pdf");
             file.createNewFile();
+
         } catch (IOException e) {
             e.printStackTrace();
         }
-
-        pdfFile = new File(folder, filename + ".pdf");
+        pdfFile = new File(filename + ".pdf");
     }
 
     public void closeDocument() {

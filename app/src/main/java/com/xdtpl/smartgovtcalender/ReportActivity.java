@@ -33,6 +33,10 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 
 import java.io.File;
+import java.nio.file.FileSystems;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -273,6 +277,7 @@ public class ReportActivity extends AppCompatActivity {
 }
 
 
+    @RequiresApi(api = Build.VERSION_CODES.O)
     public void pdfExport() {
 
         startdate = date1.getText().toString();
@@ -295,7 +300,7 @@ public class ReportActivity extends AppCompatActivity {
         //  startActivity(intent);
         try {
             templatePDF = new TemplatePDF(getApplicationContext(), getAssets());
-            templatePDF.openDocument(fileName);
+            templatePDF.openDocument(Environment.getExternalStorageDirectory().toString() +"/Download/Calendar/"+ fileName);
             templatePDF.addMetaData("Clients", "Ventas", "marines");
             templatePDF.addTitles("मासिक दैनंदिनी", "", "");
             templatePDF.addParagraph(shorttext);
@@ -311,6 +316,11 @@ public class ReportActivity extends AppCompatActivity {
             templatePDF.addSign(name2, desi);
             templatePDF.addLast(longText);
             templatePDF.closeDocument();
+//            Path src =  Paths.get(fileName);
+//            System.out.println(src);
+//            Path target= Paths.get(Environment.getExternalStorageDirectory().toString()+"/Download/Calendar/");
+//            System.out.println(target);
+//            Files.move(src,target);
         } catch (Exception e) {
             Toast.makeText(getBaseContext(), e.getMessage(), Toast.LENGTH_LONG).show();
         }
@@ -406,7 +416,6 @@ public class ReportActivity extends AppCompatActivity {
 
     private ArrayList<String[]> ReportDataList(String startdate ,String enddate){
         DatabaseHelper db = new DatabaseHelper(this);
-
         return db.ReportDataList(startdate,enddate);
     }
 

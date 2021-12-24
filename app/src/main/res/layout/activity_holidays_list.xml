@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
+<ScrollView xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     xmlns:android="http://schemas.android.com/apk/res/android">
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -32,7 +32,7 @@
     android:layout_marginTop="10dp"
     android:layout_marginBottom="10dp">
 
-    <TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    <TableLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:shrinkColumns="*"
@@ -89,51 +89,18 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dip"
-                android:text="26 जानेवारी 2021" />
+                android:text="26 जानेवारी 2022" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dip"
-                android:text="मंगळवार"/>
+                android:text="बुधवार" />
             <!--android:text="रविवार"-->
             <!--"शनिवार" />-->
         </TableRow>
         <!--Feb Month -->
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:padding="1dip"
-                android:layout_marginLeft="10dp"
-                android:text="छत्रपती शिवाजी -" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="1dip"
-                android:text="19 फेब्रुवारी 2021" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="1dip"
-                android:text="शुक्रवार"/>
-            <!--"मंगळवार " />-->
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:layout_marginLeft="10dp"
-                android:text="महाराज जयंती" />
-        </TableRow>
         <!--Marc Month-->
         <TableRow
             android:layout_width="match_parent"
@@ -145,43 +112,47 @@
                 android:gravity="left"
                 android:padding="10dip"
                 android:text="महाशिवरात्री" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dip"
-                android:text="11 मार्च 2021" />
+                android:text="1 मार्च 2022" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dip"
-                android:text="गुरुवार " />
+                android:text="मंगळवार" />
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="#18000000">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:padding="10dip"
-                android:text="होळी" />
+                android:text="होळी (दुसरा दिवस)" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dip"
-                android:text="29 मार्च 2021" />
+                android:text="18 मार्च 2022" />
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dip"
-                android:text="सोमवार"/><!-- "गुरुवार " />-->
+                android:text="शुक्रवार" /><!-- "गुरुवार " />-->
         </TableRow>
-        <!--April Month  -->
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -189,73 +160,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="left"
-                android:padding="1dp"
-                android:layout_marginLeft="10dp"
-                android:text="बँकांना आपले वार्षिक -" />
+                android:padding="10dp"
+                android:text="महावीर जयंती" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:padding="1dp"
-                android:text="1 एप्रिल 2021" />
+                android:padding="10dp"
+                android:text="14 एप्रिल 2022" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
-                android:padding="1dp"
+                android:padding="10dp"
                 android:text="गुरुवार" />
-        </TableRow>
-        <TableRow>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:layout_marginLeft="10dp"
-                android:text="लेखे पूर्ण करता येण्यासाठी " />
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:padding="10dp"
-                android:text="गुड फ्रायडे" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="2 एप्रिल 2021" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="शुक्रवार" />
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:padding="10dp"
-                android:text= "गुढीपाडवा" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="13 एप्रिल 2021" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="मंगळवार" />
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -274,13 +192,13 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="1dp"
-                android:text="14 एप्रिल 2021" />
+                android:text="14 एप्रिल 2022" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="1dp"
-                android:text="बुधवार" />
+                android:text="गुरुवार" />
         </TableRow>
         <TableRow>
             <TextView
@@ -290,6 +208,7 @@
                 android:layout_marginLeft="10dp"
                 android:text=" जयंती"/>
         </TableRow>
+        <!--April Month  -->
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -298,65 +217,19 @@
                 android:layout_height="wrap_content"
                 android:gravity="left"
                 android:padding="10dp"
-                android:text="रामनवमी" />
+                android:text="गुड फ्रायडे" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="21 एप्रिल 2021" />
+                android:text="15 एप्रिल 2022" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="बुधवार" />
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:padding="10dp"
-                android:text="महावीर जयंती" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="25 एप्रिल 2021" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="रविवार"/><!-- "बुधवार" />-->
-        </TableRow>
-        <!--May -->
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#18000000">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:padding="10dp"
-                android:text="महाराष्ट्र दिन" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="1 मे 2021" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="शनिवार" />
+                android:text="शुक्रवार" />
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -373,13 +246,13 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="13 मे 2021" />
+                android:text="3 मे 2022" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="गुरुवार" />
+                android:text="मंगळवार" />
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -396,77 +269,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="26 मे 2021" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="बुधवार" />
-        </TableRow>
-        <!--July-->
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:padding="10dp"
-                android:text=" बकरी ईद" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="21 जुलै 2021" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="बुधवार" />
-        </TableRow>
-        <!--Aug-->
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#18000000">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:padding="10dp"
-                android:text="स्वातंत्र्य दिवस" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="15 ऑगस्ट 2021" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="रविवार" />
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#18000000">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:padding="10dp"
-                android:text="पारशी नववर्ष" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="16 ऑगस्ट 2021" />
+                android:text="16 मे 2022" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -489,13 +292,59 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="19 ऑगस्ट 2021"/>->
+                android:text="9 ऑगस्ट 2022"/>->
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="गुरुवार" />
+                android:text="मंगळवार" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#18000000">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:padding="10dp"
+                android:text="स्वातंत्र्य दिवस" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="15 ऑगस्ट 2022" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="सोमवार" />
+        </TableRow>
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#18000000">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:padding="10dp"
+                android:text="पारशी नववर्ष" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="16 ऑगस्ट 2022" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="मंगळवार" />
         </TableRow>
         <!--Sept -->
         <TableRow
@@ -512,39 +361,15 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="10 सप्टेंबर 2021" />
+                android:text="31 ऑगस्ट 2022" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="शुक्रवार" />
+                android:text="बुधवार" />
         </TableRow>
         <!--Oct Month-->
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#18000000">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:padding="10dp"
-                android:text="महात्मा गांधी जयंती" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="2 ऑक्टोबर 2021" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="शनिवार" />
-
-        </TableRow>
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -560,36 +385,13 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="15 ऑक्टोबर 2021" />
+                android:text="5 ऑक्टोबर 2022" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="शुक्रवार" />
-        </TableRow>
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#18000000">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:padding="10dp"
-                android:text="ईद-ए -मिलाद" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="19 ऑक्टोबर 2021"/><!--नोव्हेंबर 2019" />-->
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="मंगळवार" />
+                android:text="बुधवार" />
         </TableRow>
         <!--Nov-->
         <TableRow
@@ -607,13 +409,13 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="1dp"
-                android:text="4 नोव्हेंबर 2021" />
+                android:text="24 ऑक्टोबर 2022" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="1dp"
-                android:text="गुरुवार" />
+                android:text="सोमवार" />
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -639,13 +441,13 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="5 नोव्हेंबर 2021" />
+                android:text="26 ऑक्टोबर 2022" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="शुक्रवार" />
+                android:text="बुधवार" />
         </TableRow>
         <TableRow
             android:layout_width="match_parent"
@@ -661,37 +463,13 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="19 नोव्हेंबर 2021" />
+                android:text="8 नोव्हेंबर 2022" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:padding="10dp"
-                android:text="शुक्रवार" />
-        </TableRow>
-        <!--Dec-->
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="#18000000">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="left"
-                android:padding="10dp"
-                android:text="ख्रिसमस" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="25 डिसेंबर 2021" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:gravity="center"
-                android:padding="10dp"
-                android:text="शनिवार" />
+                android:text="मंगळवार " />
         </TableRow>
     </TableLayout>
 </LinearLayout>

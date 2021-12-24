@@ -11,11 +11,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:text="महाशासन SMART Govt Calendar 2021"
+        android:text="महाशासन SMART Govt Calendar 2022"
         android:textColor="@color/White"
         android:textSize="25dp"
-        android:textStyle="bold"
-        />
+        android:textStyle="bold" />
 
     <TextView
         android:layout_width="match_parent"

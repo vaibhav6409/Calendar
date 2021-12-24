@@ -272,6 +272,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 } while (data.moveToNext());
 
             }
+
             return vmList;
         } catch (Exception ex) {
             Toast.makeText(ctx, ex.getMessage(), Toast.LENGTH_SHORT);
@@ -365,6 +366,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
             });
 
             int index = 0;
+            if(vmDatabaseList.size() == 0)
+            {
+                //Toast.makeText(get(), "Record not found for selected dates", Toast.LENGTH_LONG).show();
+                return vmList;
+            }
             ValueModel vmData = vmDatabaseList.get(index);
             Date dbDate = df.parse(vmData.Date);
 
