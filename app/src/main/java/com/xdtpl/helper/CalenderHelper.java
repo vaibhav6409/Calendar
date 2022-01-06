@@ -74,11 +74,20 @@ public class CalenderHelper {
             Calendar cl = Calendar.getInstance();
             cl.set(2022, 00, 26);
             cd.HoildayDate = cl;
-            cd.HolidayText = "\n26 प्रजासत्ताक दिन";
+            cd.HolidayText = "\n\n26 प्रजासत्ताक दिन";
             cd.HolidayText1 = " प्रजासत्ताक दिन";
             events.add(cd);
         }
         //Feb
+        if(month == 1 || month == AllMonth) {
+            CDate cd = new CDate();
+            Calendar cl = Calendar.getInstance();
+            cl.set(2022, 1, 19);
+            cd.HoildayDate = cl;
+            cd.HolidayText = "\n19 छत्रपती शिवाजी महाराज जयंती ";
+            cd.HolidayText1 = "छत्रपती शिवाजी महाराज जयंती";
+            events.add(cd);
+        }
         //March
         if(month == 2 || month == AllMonth) {
             CDate cd1 = new CDate();
@@ -99,6 +108,23 @@ public class CalenderHelper {
         }
         //April
         if(month == 3 || month==AllMonth) {
+
+            CDate cd3 = new CDate();
+            Calendar cl3 = Calendar.getInstance();
+            cl3.set(2022, 3, 2);
+            cd3.HoildayDate = cl3;
+            cd3.HolidayText = "\n2 गुढीपाडवा";
+            cd3.HolidayText1 = " गुढीपाडवा ";
+            events.add(cd3);
+
+            CDate cd33 = new CDate();
+            Calendar cl33 = Calendar.getInstance();
+            cl33.set(2022, 3, 10);
+            cd33.HoildayDate = cl33;
+            cd33.HolidayText = "\n10 रामनवमी";
+            cd33.HolidayText1 = " रामनवमी ";
+            events.add(cd33);
+
             CDate cd333 = new CDate();
             Calendar cl333 = Calendar.getInstance();
             cl333.set(2022, 3, 14);
@@ -126,6 +152,14 @@ public class CalenderHelper {
         // May
 
         if(month == 4 || month==AllMonth) {
+            CDate cd41 = new CDate();
+            Calendar cl41 = Calendar.getInstance();
+            cl41.set(2022, 4, 1);
+            cd41.HoildayDate = cl41;
+            cd41.HolidayText = "\n1 महाराष्ट्र दिन ";
+            cd41.HolidayText1 = " महाराष्ट्र दिन ";
+            events.add(cd41);
+
             CDate cd5 = new CDate();
             Calendar cl5 = Calendar.getInstance();
             cl5.set(2022, 4, 3);
@@ -154,17 +188,17 @@ public class CalenderHelper {
 //            cd5.HolidayText1 = " रमझान ईद ";
 //            events.add(cd5);*/
 //
-//        //July
-//        if(month == 6 || month==AllMonth) {
-//            CDate cd77 = new CDate();
-//            Calendar cl77 = Calendar.getInstance();
-//            cl77.set(2022, 6, 21);
-//            cd77.HoildayDate = cl77;
-//            cd77.HolidayText = "21 बकरी ईद ";
-//            cd77.HolidayText1 = " बकरी ईद ";
-//            events.add(cd77);
-//
-//        }
+        //July
+        if(month == 6 || month==AllMonth) {
+            CDate cd77 = new CDate();
+            Calendar cl77 = Calendar.getInstance();
+            cl77.set(2022, 6, 10);
+            cd77.HoildayDate = cl77;
+            cd77.HolidayText = "\n\n10 बकरी ईद (ईद-उल-झुआ)";
+            cd77.HolidayText1 = "बकरी ईद (ईद-उल-झुआ)";
+            events.add(cd77);
+
+        }
         //Aug
         if(month == 7 || month==AllMonth) {
             CDate cd77777 = new CDate();
@@ -203,11 +237,27 @@ public class CalenderHelper {
 
         //Oct
         if(month == 9 || month==AllMonth) {
+            CDate cd91 = new CDate();
+            Calendar cl91 = Calendar.getInstance();
+            cl91.set(2022, 9, 2);
+            cd91.HoildayDate = cl91;
+            cd91.HolidayText = "\n\n2 महात्मा गांधी जयंती";
+            cd91.HolidayText1 = "महात्मा गांधी जयंती";
+            events.add(cd91);
+
+            CDate cd92 = new CDate();
+            Calendar cl92 = Calendar.getInstance();
+            cl92.set(2022, 9, 9);
+            cd92.HoildayDate = cl92;
+            cd92.HolidayText = "\n\n9 ईद-ए-मिलाद";
+            cd92.HolidayText1 = "ईद-ए-मिलाद";
+            events.add(cd92);
+
             CDate cd99 = new CDate();
             Calendar cl99 = Calendar.getInstance();
             cl99.set(2022, 9, 5);
             cd99.HoildayDate = cl99;
-            cd99.HolidayText = "\n5 दसरा ";
+            cd99.HolidayText = "\n\n5 दसरा ";
             cd99.HolidayText1 = " दसरा ";
             events.add(cd99);
 
@@ -215,7 +265,7 @@ public class CalenderHelper {
             Calendar cl9 = Calendar.getInstance();
             cl9.set(2022, 9, 24);
             cd9.HoildayDate = cl9;
-            cd9.HolidayText = "\n24 लक्ष्मीपूजन ";
+            cd9.HolidayText = "\n\n24 लक्ष्मीपूजन ";
             cd9.HolidayText1 = "  लक्ष्मीपूजन ";
             events.add(cd9);
 
@@ -223,20 +273,31 @@ public class CalenderHelper {
             Calendar cl10 = Calendar.getInstance();
             cl10.set(2022, 9, 26);
             cd10.HoildayDate = cl10;
-            cd10.HolidayText = "\n26 बलिप्रतिपदा";
+            cd10.HolidayText = "\n\n26 बलिप्रतिपदा";
             cd10.HolidayText1 = " बलिप्रतिपदा";
             events.add(cd10);
         }
 
-//        //Nov
+        //Nov
         if(month == 10 || month==AllMonth) {
             CDate cd100 = new CDate();
             Calendar cl100 = Calendar.getInstance();
             cl100.set(2022, 10, 8);
             cd100.HoildayDate = cl100;
             cd100.HolidayText = "\n8 गुरुनानक जयंती";
-            cd100.HolidayText1 = "  गुरुनानक जयंती";
+            cd100.HolidayText1 = "गुरुनानक जयंती";
             events.add(cd100);
+        }
+        //Dec
+
+        if(month == 11 || month==AllMonth) {
+            CDate cd12 = new CDate();
+            Calendar cl12 = Calendar.getInstance();
+            cl12.set(2022, 10, 25);
+            cd12.HoildayDate = cl12;
+            cd12.HolidayText = "\n25 ख्रिसमस";
+            cd12.HolidayText1 = "ख्रिसमस";
+            events.add(cd12);
         }
         return  events;
     }

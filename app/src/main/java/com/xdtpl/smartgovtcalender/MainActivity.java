@@ -1127,9 +1127,9 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
 
             if(numberOfSat == 4)
             {
-                Sat.setText("शनिवार , रविवार - सुट्टी");
+                Sat.setText("\n\nशनिवार , रविवार - सुट्टी");
             }else{
-                Sat.setText("शनिवार , रविवार - सुट्टी");
+                Sat.setText("\n\nशनिवार , रविवार - सुट्टी");
             }
             calendarView.setEvents(events);
 
