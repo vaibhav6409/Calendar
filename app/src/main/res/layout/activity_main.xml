@@ -24,7 +24,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="महाशासन SMART Govt Calendar 2022"
+                android:text="महाशासन SMART Govt Calendar 2023"
                 android:textAlignment="center"
                 android:textColor="@color/colorPrimary"
                 android:textSize="18dp"
