@@ -544,7 +544,7 @@
                     android:layout_width="55dp"
                     android:layout_height="49dp"
                     android:textStyle="bold"
-                    android:background="@drawable/xdtpl"/>
+                    android:background="@drawable/xdt_logo"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"

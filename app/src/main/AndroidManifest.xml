@@ -9,10 +9,10 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/smartlogo2022"
+        android:icon="@drawable/smart_logo_2023"
         android:label="@string/app_name"
         android:requestLegacyExternalStorage="true"
-        android:roundIcon="@drawable/smartlogo2022"
+        android:roundIcon="@drawable/smart_logo_2023"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
