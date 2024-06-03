@@ -11,7 +11,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:text="महाशासन SMART Govt Calendar 2023"
+        android:text="महाशासन SMART Govt Calendar 2024"
         android:textColor="@color/White"
         android:textSize="25dp"
         android:textStyle="bold" />

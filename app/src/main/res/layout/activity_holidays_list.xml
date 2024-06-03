@@ -102,43 +102,17 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="26 जानेवारी 2023" />
+                        android:text="26 जानेवारी 2024" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="गुरुवार" />
+                        android:text="शुक्रवार" />
                 </TableRow>
 
                 <!--February Month -->
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="left"
-                        android:padding="10dp"
-                        android:text="महाशिवरात्री" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:text="18 फेब्रुवारी 2023" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:text="शनिवार" />
-                </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -157,18 +131,45 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="19 फेब्रुवारी 2023" />
+                        android:text="19 फेब्रुवारी 2024" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="रविवार" />
+                        android:text="सोमवार" />
 
                 </TableRow>
 
                 <!--March Month-->
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#18000000">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:padding="10dp"
+                        android:text="महाशिवरात्री" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="08 मार्च 2024" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="शुक्रवार" />
+                </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
@@ -187,20 +188,46 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="07 मार्च 2023" />
+                        android:text="25 मार्च 2024" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="मंगळवार" />
+                        android:text="सोमवार" />
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:background="#18000000">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:padding="10dp"
+                        android:text="गुड फ्रायडे" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="29 मार्च 2024" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="शुक्रवार" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -214,20 +241,72 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="22 मार्च 2023" />
+                        android:text="09 एप्रिल 2024" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="बुधवार" />
+                        android:text="मंगळवार" />
                 </TableRow>
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:background="#18000000">
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:padding="10dp"
+                        android:text="रमज़ान ईद " />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="11 एप्रिल 2024" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="गुरुवार" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:padding="10dp"
+                        android:text="डॉ.बाबासाहेब आंबेडकर \nजयंती" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="14 एप्रिल 2024" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="रविवार" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -241,14 +320,14 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="30 मार्च 2023" />
+                        android:text="17 एप्रिल 2024" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="गुरुवार" />
+                        android:text="बुधवार" />
                 </TableRow>
 
                 <!--April Month-->
@@ -269,67 +348,14 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="04 एप्रिल 2023" />
+                        android:text="21 एप्रिल 2024" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="मंगळवार" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="left"
-                        android:padding="10dp"
-                        android:text="गुड फ्रायडे" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:text="07 एप्रिल 2023" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:text="शुक्रवार" />
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="left"
-                        android:padding="10dp"
-                        android:text="डॉ.बाबासाहेब आंबेडकर \nजयंती" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:text="14 एप्रिल 2023" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:text="शुक्रवार" />
+                        android:text="रविवार" />
                 </TableRow>
 
                 <!--May Month  -->
@@ -351,14 +377,14 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="01 मे 2023" />
+                        android:text="01 मे 2024" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="सोमवार" />
+                        android:text="बुधवार" />
                 </TableRow>
 
                 <TableRow
@@ -378,14 +404,14 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="05 मे 2023" />
+                        android:text="23 मे 2024" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="शुक्रवार" />
+                        android:text="गुरुवार" />
                 </TableRow>
 
                 <!--June Month -->
@@ -406,14 +432,14 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="28 जून 2023" />
+                        android:text="17 जून 2024" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="बुधवार" />
+                        android:text="सोमवार" />
                 </TableRow>
 
                 <!--July Month  -->
@@ -435,14 +461,14 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="29 जुलै 2023" />
+                        android:text="17 जुलै 2024" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="शनिवार" />
+                        android:text="बुधवार" />
                 </TableRow>
 
                 <!--August Month  -->
@@ -463,14 +489,14 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="15 ऑगस्ट 2023" />
+                        android:text="15 ऑगस्ट 2024" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="मंगळवार" />
+                        android:text="गुरुवार" />
                 </TableRow>
 
                 <TableRow
@@ -490,14 +516,14 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="16 ऑगस्ट 2023" />
+                        android:text="15 ऑगस्ट 2024" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="बुधवार" />
+                        android:text="गुरुवार" />
                 </TableRow>
 
                 <!--September Month -->
@@ -519,14 +545,14 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="19 सप्टेंबर 2023" />
+                        android:text="07 सप्टेंबर 2024" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="मंगळवार" />
+                        android:text="शनिवार" />
                 </TableRow>
 
                 <TableRow
@@ -546,14 +572,14 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="28 सप्टेंबर 2023" />
+                        android:text="16 सप्टेंबर 2024" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="गुरुवार" />
+                        android:text="सोमवार" />
                 </TableRow>
 
                 <!--October Month-->
@@ -574,14 +600,14 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="02 ऑक्टोबर 2023" />
+                        android:text="02 ऑक्टोबर 2024" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="सोमवार" />
+                        android:text="बुधवार" />
                 </TableRow>
 
                 <TableRow
@@ -600,14 +626,14 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="24 ऑक्टोबर 2023" />
+                        android:text="12 ऑक्टोबर 2024" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="मंगळवार" />
+                        android:text="शनिवार" />
                 </TableRow>
 
                 <!--November Month-->
@@ -631,14 +657,14 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="12 नोव्हेंबर 2023" />
+                        android:text="01 नोव्हेंबर 2024" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="रविवार" />
+                        android:text="शुक्रवार" />
                 </TableRow>
 
                 <TableRow
@@ -658,14 +684,14 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="14 नोव्हेंबर 2023" />
+                        android:text="02 नोव्हेंबर 2024" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="मंगळवार" />
+                        android:text="शनिवार" />
                 </TableRow>
 
                 <TableRow
@@ -685,14 +711,14 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="27 नोव्हेंबर 2023" />
+                        android:text="15 नोव्हेंबर 2024" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="सोमवार" />
+                        android:text="शुक्रवार" />
                 </TableRow>
 
                 <!--December Month -->
@@ -713,14 +739,14 @@
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="25 डिसेंबर 2023" />
+                        android:text="25 डिसेंबर 2024" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:gravity="center"
                         android:padding="10dp"
-                        android:text="सोमवार" />
+                        android:text="बुधवार" />
                 </TableRow>
 
             </TableLayout>
