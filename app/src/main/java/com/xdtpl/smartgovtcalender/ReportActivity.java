@@ -9,9 +9,9 @@ import android.database.sqlite.SQLiteDatabase;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.annotation.RequiresApi;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
 import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
@@ -22,7 +22,8 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.github.barteksc.pdfviewer.PDFView;
+import com.alamin5g.pdf.PDFView;
+//import com.github.barteksc.pdfviewer.PDFView;
 import com.xdtpl.Service.Registration;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
@@ -33,10 +34,6 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 
 import java.io.File;
-import java.nio.file.FileSystems;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -87,7 +84,6 @@ public class ReportActivity extends AppCompatActivity {
     ProgressBar loadingProgress;
     TextView loaderText;
 
-    @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         try {
@@ -277,19 +273,25 @@ public class ReportActivity extends AppCompatActivity {
 }
 
 
-    @RequiresApi(api = Build.VERSION_CODES.O)
     public void pdfExport() {
 
         startdate = date1.getText().toString();
         enddate = date2.getText().toString();
+
         DateFormat df, df1;
         String fileName = "TourDiary.pdf";
+
         df = new SimpleDateFormat("dd/MM/yyyy");
         df1 = new SimpleDateFormat("dd-MM-yyyy");
+
         try {
             Date startDate1 = df.parse(startdate);
             Date endDate1 = df.parse(enddate);
-            fileName = "TourDiary " + df1.format(startDate1) + " to " + df1.format(endDate1);
+
+            fileName = "TourDiary "
+                    + df1.format(startDate1)
+                    + " to "
+                    + df1.format(endDate1);
 
         } catch (ParseException e) {
             e.printStackTrace();

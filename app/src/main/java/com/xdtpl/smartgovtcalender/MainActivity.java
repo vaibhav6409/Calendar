@@ -9,13 +9,6 @@ import android.database.Cursor;
 import android.graphics.Color;
 import android.net.Uri;
 import android.os.Bundle;
-import android.support.design.widget.NavigationView;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.view.GravityCompat;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.AlertDialog;
-import android.support.v7.app.AppCompatActivity;
 import android.text.Editable;
 import android.text.InputType;
 import android.text.TextUtils;
@@ -33,6 +26,15 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
+
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.app.AlertDialog;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.ActivityCompat;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
+
+import com.google.android.material.navigation.NavigationView;
 
 import com.applandeo.materialcalendarview.EventDay;
 import com.applandeo.materialcalendarview.exceptions.OutOfDateRangeException;
@@ -351,12 +353,12 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
             calendarView = (com.applandeo.materialcalendarview.CalendarView) findViewById(R.id.calendarView);
 
             Calendar cal = Calendar.getInstance();
-            cal.set(2024, 11, 31);
+            cal.set(2026, 11, 31);
 
             calendarView.setMaximumDate(cal);
 
             Calendar cal1 = Calendar.getInstance();
-            cal1.set(2023, 11, 31);
+            cal1.set(2025, 11, 31);
 
             calendarView.setMinimumDate(cal1);
 
@@ -417,9 +419,9 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
                     Calendar clickedDate = Calendar.getInstance();
                     clickedDate.set(eventDay.getCalendar().get(YEAR), eventDay.getCalendar().get(MONTH) + 1, eventDay.getCalendar().get(DATE));
                     Calendar maxDate = Calendar.getInstance();
-                    maxDate.set(2024, 12, 31);
+                    maxDate.set(2026, 12, 31);
                     Calendar minDate = Calendar.getInstance();
-                    minDate.set(2023, 11, 1);
+                    minDate.set(2025, 11, 1);
                     if (clickedDate.after(maxDate) || clickedDate.before(minDate)) {
 
                         //Toast.makeText(getBaseContext(), "Do not allowed to enter data.", Toast.LENGTH_LONG).show();
@@ -957,14 +959,14 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
 
     }
 
-    @Override
-    protected void onRestart() {
-        super.onRestart();
-        //Toast.makeText(MainActivity.this,"resume app.",Toast.LENGTH_SHORT);
-        Intent intent = new Intent(MainActivity.this, MainActivity.class);
-        startActivity(intent);
-        finish();
-    }
+//    @Override
+//    protected void onRestart() {
+//        super.onRestart();
+//        //Toast.makeText(MainActivity.this,"resume app.",Toast.LENGTH_SHORT);
+//        Intent intent = new Intent(MainActivity.this, MainActivity.class);
+//        startActivity(intent);
+//        finish();
+//    }
 
     // App Update Notification code
     @Override

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ReportActivity"
-    android:background="@color/white"
+    android:background="@android:color/white"
     android:gravity="center_horizontal"
     android:orientation="vertical">
 
@@ -39,7 +39,7 @@
             android:layout_margin="10dp"
             android:layout_weight="1"
             android:layout_gravity="center"
-            android:background="@color/white"
+            android:background="@android:color/white"
             android:elevation="0.5dp"/>
 
         <ImageView
@@ -50,7 +50,7 @@
             android:layout_margin="20dp"
             android:layout_weight="0.75"
             android:layout_gravity="center"
-            android:background="@color/white"
+            android:background="@android:color/white"
             android:elevation="0.5dp"/>
     </LinearLayout>
 </LinearLayout>

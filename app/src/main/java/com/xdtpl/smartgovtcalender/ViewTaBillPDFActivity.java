@@ -1,9 +1,10 @@
 package com.xdtpl.smartgovtcalender;
 
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 
-import com.github.barteksc.pdfviewer.PDFView;
+import com.alamin5g.pdf.PDFView;
+//import com.github.barteksc.pdfviewer.PDFView;
 
 public class ViewTaBillPDFActivity extends AppCompatActivity {
     PDFView pdfView;

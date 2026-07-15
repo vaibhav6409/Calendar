@@ -1,13 +1,14 @@
 package com.xdtpl.smartgovtcalender;
 
 import android.app.DownloadManager;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.github.barteksc.pdfviewer.PDFView;
+import com.alamin5g.pdf.PDFView;
+//import com.github.barteksc.pdfviewer.PDFView;
 
 import java.io.File;
 

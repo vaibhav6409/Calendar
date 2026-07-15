@@ -6,11 +6,12 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.os.Environment;
-import android.support.v7.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.github.barteksc.pdfviewer.PDFView;
+import com.alamin5g.pdf.PDFView;
+//import com.github.barteksc.pdfviewer.PDFView;
 
 import org.apache.poi.hssf.usermodel.HSSFWorkbook;
 import org.apache.poi.ss.usermodel.Cell;

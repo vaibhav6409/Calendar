@@ -1,80 +1,126 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.xdtpl.smartgovtcalender">
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/smart_logo_2024"
         android:label="@string/app_name"
-        android:requestLegacyExternalStorage="true"
         android:roundIcon="@drawable/smart_logo_2024"
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ImpDocFiles" />
+
+        <activity
+            android:name=".ImpDocFiles"
+            android:exported="false" />
+
         <activity
             android:name=".SplashWindowActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
         </activity>
-        <activity android:name=".ListActivity" />
+
+        <activity
+            android:name=".ListActivity"
+            android:exported="false" />
+
         <activity
             android:name=".HomeActivity"
+            android:exported="false"
             android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".ViewPDFActivity"
+            android:exported="false"
             android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".ReportActivity"
+            android:exported="false"
             android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".TABillActivity"
+            android:exported="false"
             android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".ProfileActivity"
+            android:exported="false"
             android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".WebLinkActivity"
+            android:exported="false"
             android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".ContactUsActivity"
+            android:exported="false"
             android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".ViewTaBillPDFActivity"
+            android:exported="false"
             android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".HolidaysListActivity"
+            android:exported="false"
             android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".TABillGenerteReports"
+            android:exported="false"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".RegistrationActivity" />
-        <activity android:name=".LoginActivity" />
+
+        <activity
+            android:name=".RegistrationActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+
         <activity
             android:name=".DonationActivity"
+            android:exported="false"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".MainActivity" />
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+
         <activity
             android:name=".UserManualActivity"
+            android:exported="false"
             android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".TitleSponsorActivity"
+            android:exported="false"
             android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".SponsorActivity"
+            android:exported="false"
             android:parentActivityName=".MainActivity" />
+
         <activity
             android:name=".Medicalbill"
+            android:exported="false"
             android:parentActivityName=".MainActivity" />
+
     </application>
 
 </manifest>

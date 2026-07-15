@@ -1,144 +1,131 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReportActivity"
-    android:gravity="center"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    tools:context=".ReportActivity">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="30dp">
-
+    <!-- Title -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:gravity="center"
         android:text="मासिक दैनंदिनी"
-        android:textSize="25sp"
-        android:textStyle="bold"
         android:textColor="@color/colorPrimary"
-        android:gravity="center"/>
-    </LinearLayout>
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <!-- Start Date -->
     <EditText
         android:id="@+id/ed"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
-        android:hint="StartDate"/>
+        android:focusable="false"
+        android:hint="Start Date"
+        android:clickable="true" />
+
+    <!-- End Date -->
     <EditText
         android:id="@+id/enddate"
-        android:layout_width="wrap_content"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_marginTop="20dp"
-        android:hint="EndDate"/>
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:focusable="false"
+        android:hint="End Date"
+        android:clickable="true" />
 
- <!--   <EditText
-        android:id="@+id/ed1"
-        android:layout_width="wrap_content"
+    <!-- PDF / Excel Selection -->
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_marginTop="20dp"
-        android:hint="StartDate"/>
+        android:layout_marginTop="5dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
-    <EditText
-        android:id="@+id/ed2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_marginTop="0dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:hint="EndDate"/>    -->
+        <CheckBox
+            android:id="@+id/pdf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:text="PDF" />
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:layout_gravity="center"
-    android:gravity="center"
-    android:layout_marginTop="5dp">
-    <CheckBox
-        android:id="@+id/pdf"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="PDF"
-        android:layout_marginRight="10dp"
-        />
-<!--app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:focusableInTouchMode="true"-->
-    <CheckBox
-        android:id="@+id/excel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Excel"
-        android:layout_marginLeft="10dp"/>
-</LinearLayout>
+        <CheckBox
+            android:id="@+id/excel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:text="Excel" />
 
+    </LinearLayout>
 
+    <!-- Loading -->
     <ProgressBar
         android:id="@+id/loadingProgress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:indeterminate="true"
-        android:scaleType="fitCenter"
         android:visibility="gone" />
+
     <TextView
         android:id="@+id/loaderText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:gravity="center"
         android:text="Download Successfully"
+        android:textColor="@android:color/black"
         android:textStyle="bold"
-        android:textAlignment="center"
-        android:textColor="@color/black"
-        android:visibility="gone"/>
+        android:visibility="gone" />
+
+    <!-- Generate Report Button -->
     <Button
         android:id="@+id/btn"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
-        android:ems="10"
-        android:text="अहवाल तयार करा"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
         android:background="@color/colorPrimary"
+        android:text="अहवाल तयार करा"
         android:textColor="@color/White"
-        android:textSize="15dp"
-        android:layout_marginTop="20dp"/>
+        android:textSize="15sp" />
 
+    <!-- Notes -->
     <LinearLayout
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
         android:layout_marginBottom="20dp"
-        android:layout_marginTop="25sp"
-        android:gravity="center">
+        android:gravity="center"
+        android:orientation="vertical">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="@string/note"
-            android:textStyle="bold"
-            android:textAlignment="center"
-            android:textColor="#f70303"/>
+            android:textColor="#f70303"
+            android:textStyle="bold" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:text="@string/note1"
-            android:textStyle="bold"
-            android:textAlignment="center"
-            android:textColor="#f70303"/>
+            android:textColor="#f70303"
+            android:textStyle="bold" />
 
     </LinearLayout>
 
-    <com.github.barteksc.pdfviewer.PDFView
+    <!-- PDF Viewer -->
+    <com.alamin5g.pdf.PDFView
         android:id="@+id/pdfView"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"/>
-
-
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
 
 </LinearLayout>
