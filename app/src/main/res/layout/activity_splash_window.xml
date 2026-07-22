@@ -14,7 +14,7 @@
         android:id="@+id/img"
         android:layout_width="250dp"
         android:layout_height="250dp"
-        android:background="@drawable/smart_logo_2024"
+        android:background="@drawable/smart_logo_2026"
         android:textStyle="bold" />
 
     <LinearLayout
