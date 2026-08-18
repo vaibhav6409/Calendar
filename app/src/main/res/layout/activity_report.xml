@@ -1,131 +1,334 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    android:background="#F5F7FA"
+    android:fillViewport="true"
+    android:scrollbars="none"
     tools:context=".ReportActivity">
 
-    <!-- Title -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:gravity="center"
-        android:text="मासिक दैनंदिनी"
-        android:textColor="@color/colorPrimary"
-        android:textSize="25sp"
-        android:textStyle="bold" />
-
-    <!-- Start Date -->
-    <EditText
-        android:id="@+id/ed"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:focusable="false"
-        android:hint="Start Date"
-        android:clickable="true" />
-
-    <!-- End Date -->
-    <EditText
-        android:id="@+id/enddate"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        android:focusable="false"
-        android:hint="End Date"
-        android:clickable="true" />
-
-    <!-- PDF / Excel Selection -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:orientation="vertical"
+        android:paddingBottom="20dp">
 
-        <CheckBox
-            android:id="@+id/pdf"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:text="PDF" />
+        <!-- HEADER -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_margin="12dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="5dp">
 
-        <CheckBox
-            android:id="@+id/excel"
-            android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="मासिक दैनंदिनी"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="6dp"-->
+                <!--                    android:text="महाराष्ट्र शासन दिनदर्शिका 2026"-->
+                <!--                    android:textColor="@android:color/white"-->
+                <!--                    android:textSize="16sp" />-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="अहवाल तयार करा"
+                    android:textColor="#DDE7FF"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- REPORT OPTIONS CARD -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/reportOptionsCard"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="10dp"
-            android:text="Excel" />
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="3dp"
+            app:strokeColor="#E1E5EA"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+
+                <!-- SECTION TITLE -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="अहवाल तयार करा"
+                    android:textColor="#202124"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="तारीख आणि अहवालाचा प्रकार निवडा"
+                    android:textColor="#757575"
+                    android:textSize="13sp" />
+
+
+                <!-- START DATE -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/startDateLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:hint="प्रारंभ तारीख"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- END DATE -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/endDateLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="शेवटची तारीख"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/enddate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="true"
+                        android:focusable="false"
+                        android:inputType="none"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- FORMAT -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="अहवालाचा प्रकार"
+                    android:textColor="#202124"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+
+                    <!-- PDF -->
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="#E1E5EA"
+                        app:strokeWidth="1dp">
+
+                        <CheckBox
+                            android:id="@+id/pdf"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:gravity="center"
+                            android:text="PDF"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+
+                    <!-- EXCEL -->
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        app:cardCornerRadius="12dp"
+                        app:cardElevation="0dp"
+                        app:strokeColor="#E1E5EA"
+                        app:strokeWidth="1dp">
+
+                        <CheckBox
+                            android:id="@+id/excel"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:buttonTint="@color/colorPrimary"
+                            android:gravity="center"
+                            android:text="Excel"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="15sp"
+                            android:textStyle="bold" />
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+
+                <!-- GENERATE BUTTON -->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="18dp"
+                    android:text="अहवाल तयार करा"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:cornerRadius="12dp" />
+
+
+                <!-- LOADING -->
+
+                <ProgressBar
+                    android:id="@+id/loadingProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="12dp"
+                    android:indeterminate="true"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/loaderText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="Download Successfully"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="13sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- NOTE -->
+
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="14dp"-->
+<!--            android:layout_marginTop="12dp"-->
+<!--            android:layout_marginEnd="14dp"-->
+<!--            app:cardBackgroundColor="#FFF8E1"-->
+<!--            app:cardCornerRadius="14dp"-->
+<!--            app:cardElevation="2dp"-->
+<!--            app:strokeColor="#FFE082"-->
+<!--            app:strokeWidth="1dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="12dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="@string/note"-->
+<!--                    android:textColor="#D84315"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="4dp"-->
+<!--                    android:gravity="center"-->
+<!--                    android:text="@string/note1"-->
+<!--                    android:textColor="#D84315"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--            </LinearLayout>-->
+
+<!--        </com.google.android.material.card.MaterialCardView>-->
+
+
+        <!-- PDF VIEWER -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/pdfContainer"
+            android:layout_width="match_parent"
+            android:layout_height="0.001dp">
+
+            <com.alamin5g.pdf.PDFView
+                android:id="@+id/pdfView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.google.android.material.card.MaterialCardView>
 
     </LinearLayout>
 
-    <!-- Loading -->
-    <ProgressBar
-        android:id="@+id/loadingProgress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:indeterminate="true"
-        android:visibility="gone" />
-
-    <TextView
-        android:id="@+id/loaderText"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="Download Successfully"
-        android:textColor="@android:color/black"
-        android:textStyle="bold"
-        android:visibility="gone" />
-
-    <!-- Generate Report Button -->
-    <Button
-        android:id="@+id/btn"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:background="@color/colorPrimary"
-        android:text="अहवाल तयार करा"
-        android:textColor="@color/White"
-        android:textSize="15sp" />
-
-    <!-- Notes -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_marginBottom="20dp"
-        android:gravity="center"
-        android:orientation="vertical">
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/note"
-            android:textColor="#f70303"
-            android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/note1"
-            android:textColor="#f70303"
-            android:textStyle="bold" />
-
-    </LinearLayout>
-
-    <!-- PDF Viewer -->
-    <com.alamin5g.pdf.PDFView
-        android:id="@+id/pdfView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
-
-</LinearLayout>
+</ScrollView>

@@ -1,10 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#0e67dc</color>
-    <color name="colorPrimaryDark">#000a57</color>
-    <color name="colorAccent">#1b21d8</color>
 
-    <color name="White">#ffffff</color>
-    <color name="red">#FD0303</color>
+    <color name="colorPrimary">#6A1B9A</color>
+    <color name="colorAccent">#EC407A</color>
+    <color name="calendarHeader">#6A1B9A</color>
+    <color name="calendarSelection">#EC407A</color>
+    <color name="calendarToday">#EC407A</color>
+    <color name="calendarText">#333333</color>
+    <color name="calendarBackground">#FFFFFF</color>
+
+    <!-- Primary Brand -->
+    <color name="colorPrimaryDark">#1565C0</color>
+
+    <!-- Secondary -->
+    <color name="colorSecondary">#26A69A</color>
+    <color name="colorSuccess">#4CAF50</color>
+
+    <!-- Background -->
+    <color name="colorBackground">#F5F7FA</color>
+    <color name="colorSurface">#FFFFFF</color>
+
+    <!-- Text -->
+    <color name="colorTextPrimary">#333333</color>
+    <color name="colorTextSecondary">#666666</color>
+
+    <!-- Status Colors -->
+    <color name="red">#F44336</color>
+    <color name="orange">#FF9800</color>
+    <color name="green">#4CAF50</color>
+
+    <!-- Existing -->
+    <color name="White">#FFFFFF</color>
+
+    <color name="colorCard">#FFFFFF</color>
+    <color name="colorHoliday">#D81B60</color>
 
 </resources>

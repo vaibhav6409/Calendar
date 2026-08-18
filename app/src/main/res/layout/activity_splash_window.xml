@@ -8,7 +8,7 @@
     android:layout_gravity="center"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@android:color/white">
+    android:background="@color/colorBackground">
 
     <ImageView
         android:id="@+id/img"
@@ -16,47 +16,4 @@
         android:layout_height="250dp"
         android:background="@drawable/smart_logo_2026"
         android:textStyle="bold" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="30dp">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Powered By"
-            android:textSize="25dp"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimary"
-            android:layout_margin="5dp"
-            android:fontFamily="sans-serif"/>
-    </LinearLayout>
-
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:layout_marginTop="30dp">
-        <ImageView
-            android:id="@+id/ad1"
-            android:layout_width="86dp"
-            android:layout_height="70dp"
-            android:textStyle="bold"
-            android:background="@drawable/sgulogom"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="               "/>
-        <ImageView
-            android:id="@+id/ad2"
-            android:layout_width="86dp"
-            android:layout_height="70dp"
-            android:textStyle="bold"
-            android:background="@drawable/xdt_logo"/>
-
-    </LinearLayout>
-
 </LinearLayout>

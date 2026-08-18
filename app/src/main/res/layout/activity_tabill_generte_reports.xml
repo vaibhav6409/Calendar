@@ -1,474 +1,494 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    xmlns:android="http://schemas.android.com/apk/res/android">
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:layout_marginBottom="20dp"
-    tools:context=".TABillGenerteReports">
+    android:background="#F5F7FA"
+    android:fillViewport="true"
+    android:scrollbars="none">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="30sp">
+        android:paddingBottom="24dp"
+        tools:context=".TABillGenerteReports">
+
+
+        <!-- HEADER -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_margin="12dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="प्रवास भत्ता देयक / टी. ए. बिल"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="6dp"-->
+                <!--                    android:text="महाराष्ट्र शासन दिनदर्शिका 2026"-->
+                <!--                    android:textColor="@android:color/white"-->
+                <!--                    android:textSize="16sp" />-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="अहवाल तयार करा"
+                    android:textColor="#DDE7FF"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- MONTH SECTION -->
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="प्रवास भत्ता देयक / टी. ए. बिल "
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimary"
-            android:gravity="center"/>
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="अहवाल तयार करा"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="16dp"
+            android:text="2026 TA Bill"
+            android:textColor="#202124"
             android:textSize="20sp"
-            android:layout_marginTop="5dp"
-            android:textStyle="bold"
-            android:textColor="@color/colorPrimary"
-            android:gravity="center"/>
-    </LinearLayout>
+            android:textStyle="bold" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_margin="10sp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/roundcornerimage">
-
-        <LinearLayout
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
+        <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="0dp">
-            <androidx.cardview.widget.CardView
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="16dp"
+            android:text="महिना निवडा"
+            android:textColor="#757575"
+            android:textSize="13sp" />
+
+
+        <!-- MONTH GRID -->
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="2"
+            android:padding="8dp"
+            android:useDefaultMargins="false">
+
+
+            <!-- JANUARY -->
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/jan"
-                android:layout_width="120dp"
-                android:layout_height="40dp"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="20dp"
-                android:elevation="10dp"
-                app:cardBackgroundColor="#1b434445">
-                <LinearLayout
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <!-- <ImageButton
-                        android:background="@drawable/one"
-                        android:layout_width="24dp"
-                        android:layout_height="24dp"
-                        android:clickable="true" /> -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="जानेवारी"
-                        android:textColor="#000"
-                        android:textSize="16sp"
-                        android:textStyle="bold"
-                        android:layout_marginTop="0dp"
-                        android:layout_gravity="center" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="      "/>
-            <androidx.cardview.widget.CardView
-                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
                 android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:strokeColor="#E1E5EA"
+                app:strokeWidth="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="जानेवारी"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- FEBRUARY -->
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/feb"
-                android:layout_width="120dp"
-                android:layout_height="40dp"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="20dp"
-                android:elevation="10dp"
-                app:cardBackgroundColor="#1b434445">
-                <LinearLayout
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="फेब्रुवारी"
-                        android:textColor="#000"
-                        android:textStyle="bold"
-                        android:textSize="17sp"
-                        android:layout_marginTop="0dp"
-                        android:layout_gravity="center" />
-
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-
-        <LinearLayout
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20sp">
-
-            <androidx.cardview.widget.CardView
-                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
                 android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:strokeColor="#E1E5EA"
+                app:strokeWidth="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="फेब्रुवारी"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- MARCH -->
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/mar"
-                android:layout_width="120dp"
-                android:layout_height="40dp"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="20dp"
-                android:elevation="10dp"
-                app:cardBackgroundColor="#1b434445">
-                <LinearLayout
-                    android:gravity="center"
-                    android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:strokeColor="#E1E5EA"
+                app:strokeWidth="1dp">
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="0dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="मार्च"
-                        android:textColor="#000"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginTop="0dp"
-                        android:layout_gravity="center" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="      "/>
+                    android:gravity="center"
+                    android:text="मार्च"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
 
-            <androidx.cardview.widget.CardView
-                android:foreground="?android:attr/selectableItemBackground"
-                android:clickable="true"
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- APRIL -->
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/Apr"
-                android:layout_width="120dp"
-                android:layout_height="40dp"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="20dp"
-                android:elevation="10dp"
-                app:cardBackgroundColor="#1b434445">
-                <LinearLayout
-                    android:gravity="center"
-                    android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:strokeColor="#E1E5EA"
+                app:strokeWidth="1dp">
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="0dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="एप्रिल"
-                        android:textColor="#000"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginTop="0dp"
-                        android:layout_gravity="center" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-        <LinearLayout
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20sp">
+                    android:gravity="center"
+                    android:text="एप्रिल"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
 
-            <androidx.cardview.widget.CardView
-                android:clickable="true"
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- MAY -->
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/may"
-                android:layout_width="120dp"
-                android:layout_height="40dp"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="20dp"
-                android:elevation="10dp"
-                app:cardBackgroundColor="#1b434445">
-                <LinearLayout
-                    android:gravity="center"
-                    android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:strokeColor="#E1E5EA"
+                app:strokeWidth="1dp">
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="0dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="मे"
-                        android:textColor="#000"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="0dp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="      "/>
-            <androidx.cardview.widget.CardView
+                    android:gravity="center"
+                    android:text="मे"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- JUNE -->
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/june"
-                android:layout_width="120dp"
-                android:layout_height="40dp"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="20dp"
-                android:elevation="10dp"
-                app:cardBackgroundColor="#1b434445">
-                <LinearLayout
-                    android:gravity="center"
-                    android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:strokeColor="#E1E5EA"
+                app:strokeWidth="1dp">
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="0dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="जून"
-                        android:textColor="#000"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginTop="0dp"
-                        android:layout_gravity="center" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-        <LinearLayout
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20sp">
+                    android:gravity="center"
+                    android:text="जून"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
 
-            <androidx.cardview.widget.CardView
-                android:clickable="true"
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- JULY -->
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/july"
-                android:layout_width="120dp"
-                android:layout_height="40dp"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="20dp"
-                android:elevation="10dp"
-                app:cardBackgroundColor="#1b434445">
-                <LinearLayout
-                    android:gravity="center"
-                    android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:strokeColor="#E1E5EA"
+                app:strokeWidth="1dp">
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="0dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="जुलै"
-                        android:textColor="#000"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="0dp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="      "/>
-            <androidx.cardview.widget.CardView
-                android:clickable="true"
+                    android:gravity="center"
+                    android:text="जुलै"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- AUGUST -->
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/Aug"
-                android:layout_width="120dp"
-                android:layout_height="40dp"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="20dp"
-                android:elevation="10dp"
-                app:cardBackgroundColor="#1b434445">
-                <LinearLayout
-                    android:gravity="center"
-                    android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:strokeColor="#E1E5EA"
+                app:strokeWidth="1dp">
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="0dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ऑगस्ट"
-                        android:textColor="#000"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginTop="0dp"
-                        android:layout_gravity="center" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-        <LinearLayout
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20sp">
+                    android:gravity="center"
+                    android:text="ऑगस्ट"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
 
-            <androidx.cardview.widget.CardView
-                android:clickable="true"
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- SEPTEMBER -->
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/Sept"
-                android:layout_width="120dp"
-                android:layout_height="40dp"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="20dp"
-                android:elevation="10dp"
-                app:cardBackgroundColor="#1b434445">
-                <LinearLayout
-                    android:gravity="center"
-                    android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:strokeColor="#E1E5EA"
+                app:strokeWidth="1dp">
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="0dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="सप्टेंबर"
-                        android:textColor="#000"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="0dp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="      "/>
-            <androidx.cardview.widget.CardView
-                android:clickable="true"
+                    android:gravity="center"
+                    android:text="सप्टेंबर"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- OCTOBER -->
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/Oct"
-                android:layout_width="120dp"
-                android:layout_height="40dp"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="20dp"
-                android:elevation="10dp"
-                app:cardBackgroundColor="#1b434445">
-                <LinearLayout
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_weight="2"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:strokeColor="#E1E5EA"
+                app:strokeWidth="1dp">
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="0dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="ऑक्टोबर"
-                        android:textColor="#000"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginTop="0dp"
-                        android:layout_gravity="center" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
-        <LinearLayout
-            android:gravity="center_horizontal"
-            android:orientation="horizontal"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="0dp"
-            android:layout_marginTop="20sp">
+                    android:gravity="center"
+                    android:text="ऑक्टोबर"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
 
-            <androidx.cardview.widget.CardView
-                android:clickable="true"
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <!-- NOVEMBER -->
+
+            <com.google.android.material.card.MaterialCardView
                 android:id="@+id/Nov"
-                android:layout_width="120dp"
-                android:layout_height="40dp"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="20dp"
-                android:elevation="10dp"
-                app:cardBackgroundColor="#1b434445">
-                <LinearLayout
-                    android:gravity="center"
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="0dp">
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="नोव्हेंबर"
-                        android:textColor="#000"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="0dp" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="      "/>
-            <androidx.cardview.widget.CardView
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
                 android:clickable="true"
-                android:id="@+id/Dec"
-                android:layout_width="120dp"
-                android:layout_height="40dp"
-                android:layout_margin="5dp"
-                app:cardCornerRadius="20dp"
-                android:elevation="10dp"
-                app:cardBackgroundColor="#1b434445">
-                <LinearLayout
-                    android:gravity="center"
-                    android:orientation="vertical"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:strokeColor="#E1E5EA"
+                app:strokeWidth="1dp">
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="0dp">
-                    <!-- <ImageButton
-                        android:background="@drawable/twelve"
-                        android:layout_width="34dp"
-                        android:layout_height="34dp"/> -->
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="डिसेंबर"
-                        android:textColor="#000"
-                        android:textStyle="bold"
-                        android:textSize="16sp"
-                        android:layout_marginTop="0dp"
-                        android:layout_gravity="center" />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-        </LinearLayout>
+                    android:gravity="center"
+                    android:text="नोव्हेंबर"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
 
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="20sp"
-            android:gravity="center">
+            </com.google.android.material.card.MaterialCardView>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/note"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:textColor="#f70303"/>
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/note1"
-                android:textStyle="bold"
-                android:textAlignment="center"
-                android:textColor="#f70303"/>
-        </LinearLayout>
+
+            <!-- DECEMBER -->
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/Dec"
+                android:layout_width="0dp"
+                android:layout_height="85dp"
+                android:layout_columnWeight="1"
+                android:layout_margin="6dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="3dp"
+                app:strokeColor="#E1E5EA"
+                app:strokeWidth="1dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="डिसेंबर"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </GridLayout>
+
+
+        <!-- NOTE -->
+
+<!--        <com.google.android.material.card.MaterialCardView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="14dp"-->
+<!--            android:layout_marginTop="8dp"-->
+<!--            android:layout_marginEnd="14dp"-->
+<!--            app:cardBackgroundColor="#FFF8E1"-->
+<!--            app:cardCornerRadius="14dp"-->
+<!--            app:cardElevation="2dp"-->
+<!--            app:strokeColor="#FFE082"-->
+<!--            app:strokeWidth="1dp">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="12dp">-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/note"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#D84315"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="4dp"-->
+<!--                    android:text="@string/note1"-->
+<!--                    android:textAlignment="center"-->
+<!--                    android:textColor="#D84315"-->
+<!--                    android:textStyle="bold" />-->
+
+<!--            </LinearLayout>-->
+
+<!--        </com.google.android.material.card.MaterialCardView>-->
+
     </LinearLayout>
 
-</LinearLayout>
 </ScrollView>

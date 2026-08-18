@@ -1,79 +1,127 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:background="@color/colorBackground">
 
-    <LinearLayout
+
+<LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         tools:context=".HolidaysListActivity">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:orientation="vertical">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="सरकारी सुट्ट्या"
-                android:textAlignment="center"
-                android:textColor="@color/colorPrimary"
-                android:textSize="25sp"
-                android:textStyle="bold" />
-        </LinearLayout>
+    <!-- HEADER -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_margin="12dp"
+        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardCornerRadius="22dp"
+        app:cardElevation="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp">
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="16dp">
 
-            <TableLayout
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="सरकारी सुट्ट्या"
+                android:textColor="@android:color/white"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <!--                <TextView-->
+            <!--                    android:layout_width="wrap_content"-->
+            <!--                    android:layout_height="wrap_content"-->
+            <!--                    android:layout_marginTop="6dp"-->
+            <!--                    android:text="महाराष्ट्र शासन दिनदर्शिका 2026"-->
+            <!--                    android:textColor="@android:color/white"-->
+            <!--                    android:textSize="16sp" />-->
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Government Holidays 2026"
+                android:textColor="#DDE7FF"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2.5dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="2.5dp"
+            android:layout_marginBottom="16dp"
+            app:cardBackgroundColor="@color/colorCard"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="4dp"
+            app:strokeColor="#F1DCE8"
+            app:strokeWidth="1dp">
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:shrinkColumns="*"
+            android:stretchColumns="*">
+
+            <!-- HEADER -->
+
+            <TableRow
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginLeft="10dp"
-                android:layout_marginRight="10dp"
-                android:shrinkColumns="*"
-                android:stretchColumns="*">
+                android:layout_height="wrap_content"
+                android:background="@drawable/holiday_header_background">
 
-                <!-- Row 2 with 3 columns -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.3"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:text="सुट्टीचा दिवस"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
-                <TableRow
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:text="तारीख"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:text="सुट्टीचा दिवस"
-                        android:textColor="#000000" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:gravity="center"
+                    android:padding="12dp"
+                    android:text="वार"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:text="तारीख"
-                        android:textColor="#000000" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_weight="1"
-                        android:gravity="center"
-                        android:padding="10dp"
-                        android:text="वार"
-                        android:textColor="#000000" />
-                </TableRow>
+            </TableRow>
 
                 <!--January Month-->
 
@@ -88,7 +136,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#18000000">
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -116,7 +164,8 @@
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -143,7 +192,8 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -173,7 +223,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#18000000">
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -200,7 +250,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#18000000">
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -227,7 +277,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="#18000000">
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -254,7 +304,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#18000000">
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -281,7 +331,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#18000000">
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -309,7 +359,8 @@
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent">
+                    android:layout_height="match_parent"
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -336,7 +387,8 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="match_parent"
@@ -365,7 +417,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#18000000">
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -392,7 +444,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#18000000">
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -419,7 +471,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#18000000">
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -447,7 +499,8 @@
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -478,7 +531,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#18000000">
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -506,7 +559,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_vertical"
-                    android:background="#18000000">
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -533,7 +586,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#18000000">
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -561,7 +614,8 @@
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -590,7 +644,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#18000000">
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -617,7 +671,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#18000000">
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -646,7 +700,8 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center_vertical">
+                    android:gravity="center_vertical"
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -672,7 +727,8 @@
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -698,7 +754,8 @@
 
                 <TableRow
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -727,7 +784,7 @@
                 <TableRow
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="#18000000">
+                    android:background="@drawable/holiday_row_background">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -752,6 +809,7 @@
                 </TableRow>
 
             </TableLayout>
-        </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
     </LinearLayout>
 </ScrollView>

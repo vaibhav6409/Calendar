@@ -1,225 +1,424 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical">
 
-    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F7FA"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context=".ReportActivity">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:paddingBottom="25dp">
 
-        <LinearLayout
-            android:layout_width="wrap_content"
+
+        <!-- HEADER -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/headerCard"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="3dp"
+            app:strokeColor="@color/colorPrimary"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="दैनंदिनी नोंद"
+                android:textColor="@color/colorPrimary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- DATE -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/dateCard"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="vertical">
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="3dp"
+            app:strokeColor="#E1E5EA"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:id="@+id/DisplayDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="14dp"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- FORM -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/formCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginEnd="10dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="3dp"
+            app:strokeColor="#E1E5EA"
+            app:strokeWidth="1dp">
 
             <LinearLayout
-                android:layout_width="380dp"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:padding="15dp">
+
+
+                <!-- SECTION TITLE -->
 
                 <TextView
-                    android:id="@+id/DisplayDate"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:ems="10"
-                    android:textColor="@color/colorAccent"
-                    android:textSize="16dp"
+                    android:text="प्रवासाची माहिती"
+                    android:textColor="#202124"
+                    android:textSize="18sp"
                     android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="प्रवासाची संपूर्ण माहिती भरा"
+                    android:textColor="#757575"
+                    android:textSize="13sp" />
+
+
+                <!-- HIDDEN ID -->
 
                 <EditText
                     android:id="@+id/txtId"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="20dp"
-                    android:ems="10"
-                    android:hint=" "
-                    android:inputType="number"
+                    android:layout_width="1dp"
+                    android:layout_height="1dp"
                     android:visibility="gone" />
 
 
-                <LinearLayout
+                <!-- PURPOSE -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/purposeLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                    android:layout_marginTop="18dp"
+                    android:hint="कामाचा तपशील (max 8 words)"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxStrokeColor="@color/colorPrimary">
 
-                <EditText
-                    android:id="@+id/txtPurpose"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-
-                    android:ems="10"
-                    android:hint="कामाचा तपशील(max 8 words)"
-                    android:inputType="text" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtPurpose"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="*"
-                        android:textColor="@color/red" />
+                        android:inputType="text"
+                        android:maxLines="1"
+                        android:textSize="15sp" />
 
-                </LinearLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <EditText
-                    android:id="@+id/txtFrom"
-                    android:layout_width="wrap_content"
+
+                <!-- FROM -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/fromLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:ems="10"
+                    android:layout_marginTop="12dp"
                     android:hint="निर्गमन (निघण्याचे ठिकाण)"
-                    android:inputType="text" />
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxStrokeColor="@color/colorPrimary">
 
-                <EditText
-                    android:id="@+id/txtTo"
-                    android:layout_width="wrap_content"
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtFrom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- TO -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/toLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="0dp"
-                    android:ems="10"
-                    android:hint="आगमन (पोहचण्याचे ठिकाण) "
-                    android:inputType="text" />
+                    android:layout_marginTop="12dp"
+                    android:hint="आगमन (पोहोचण्याचे ठिकाण)"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtTo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
 
-                <EditText
-                    android:id="@+id/txtFromTime"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:ems="10"
-                    android:hint="वेळ(पासून)(9:45)"
-                    android:inputType="time" />
-
-
-                <EditText
-                    android:id="@+id/txtToTime"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-
-                    android:ems="10"
-                    android:hint="वेळ(पर्यंत)(5:45)"
-                    android:inputType="time" />
-
-                <EditText
-                    android:id="@+id/txtDistance"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:layout_marginTop="0dp"
-                    android:ems="10"
-                    android:hint="अंतर(किलोमीटर)"
-                    android:inputType="number" />
-
-
-                <Spinner
-                    android:id="@+id/spinner"
-                    android:layout_width="wrap_content"
-                    android:layout_height="50dp"
-                    android:layout_gravity="center"
-                    android:dropDownWidth="wrap_content"
-                    android:ems="10"
-                    android:minWidth="200dp">
-
-                </Spinner>
-
+                <!-- TIME ROW -->
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:layout_marginTop="12dp"
                     android:orientation="horizontal">
 
-                    <EditText
-                        android:id="@+id/txtTA"
-                        android:layout_width="wrap_content"
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/fromTimeLayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="0dp"
-                        android:ems="10"
-                        android:hint="(टीए) वाहन भाडे(रुपये)"
-                        android:inputType="number" />
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:hint="वेळ (पासून)"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxStrokeColor="@color/colorPrimary">
 
-                    <TextView
-                        android:layout_width="wrap_content"
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtFromTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:inputType="time"
+                            android:textSize="14sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/toTimeLayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
                         android:layout_height="wrap_content"
-                        android:text="#"
-                        android:textColor="@color/red" />
-                </LinearLayout>
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:hint="वेळ (पर्यंत)"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxStrokeColor="@color/colorPrimary">
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:gravity="center"
-                    android:orientation="horizontal">
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtToTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:focusable="false"
+                            android:inputType="time"
+                            android:textSize="14sp" />
 
-                    <EditText
-                        android:id="@+id/txtDA"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="0dp"
-                        android:ems="10"
-                        android:hint="(डीए)दैनिक भत्याचा दर (रुपये)"
-                        android:inputType="number" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="#"
-                        android:textColor="@color/red" />
+                    </com.google.android.material.textfield.TextInputLayout>
 
                 </LinearLayout>
 
+
+                <!-- DISTANCE -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/distanceLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="अंतर (किलोमीटर)"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/txtDistance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- TRAVEL MODE -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:text="प्रवासाचे साधन"
+                    android:textColor="#202124"
+                    android:textSize="14sp"
+                    android:textStyle="bold" />
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:layout_marginTop="6dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/colorPrimary"
+                    app:strokeWidth="1dp">
+
+                    <Spinner
+                        android:id="@+id/spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingStart="10dp"
+                        android:paddingEnd="10dp"
+                        android:spinnerMode="dropdown" />
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <!-- TA / DA -->
+
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:gravity="center"
+                    android:layout_marginTop="12dp"
                     android:orientation="horizontal">
 
-                    <EditText
+                    <!-- TA -->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/taLayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="6dp"
+                        android:layout_weight="1"
+                        android:hint="टीए वाहन भाडे (₹)"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxStrokeColor="@color/colorPrimary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtTA"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:textSize="14sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <!-- DA -->
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/daLayout"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="6dp"
+                        android:layout_weight="1"
+                        android:hint="डीए दर (₹)"
+                        app:boxCornerRadiusBottomEnd="12dp"
+                        app:boxCornerRadiusBottomStart="12dp"
+                        app:boxCornerRadiusTopEnd="12dp"
+                        app:boxCornerRadiusTopStart="12dp"
+                        app:boxStrokeColor="@color/colorPrimary">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/txtDA"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:textSize="14sp" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+
+                <!-- ABSENCE -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/expLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="प्रत्यक्ष अनुपस्थिती (तासांमध्ये)"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
                         android:id="@+id/exp"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginTop="0dp"
-                        android:ems="10"
-                        android:hint="प्रत्यक्ष अनुपस्थिती ( तासांमध्ये )"
-                        android:inputType="time" />
+                        android:inputType="numberDecimal"
+                        android:textSize="15sp" />
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="#"
-                        android:textColor="@color/red" />
-                </LinearLayout>
+                </com.google.android.material.textfield.TextInputLayout>
 
-                <LinearLayout
+
+                <!-- NOTE -->
+
+                <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
                     android:gravity="center"
-                    android:orientation="horizontal">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="(Note: *,# fields are mandatory.)"
-                        android:textColor="@color/cardview_dark_background" />
-                </LinearLayout>
+                    android:text="* आणि # असलेली फील्ड अनिवार्य आहेत."
+                    android:textColor="@color/red"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
 
             </LinearLayout>
 
+        </com.google.android.material.card.MaterialCardView>
 
-        </LinearLayout>
-    </RelativeLayout>
+    </LinearLayout>
+
 </ScrollView>
-

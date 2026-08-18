@@ -1,114 +1,287 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReportActivity"
-    android:gravity="center_horizontal"
-    android:orientation="vertical">
+    android:background="#F5F7FA"
+    android:fillViewport="true"
+    android:scrollbars="none"
+    tools:context=".ReportActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="30sp">
+        android:paddingBottom="25dp">
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="माझे प्रोफाइल"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:textColor="@color/colorPrimary"
-        android:gravity="center"
-        android:inputType="text"/>
+
+        <!-- HEADER -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_margin="12dp"
+            app:cardBackgroundColor="@color/colorPrimary"
+            app:cardCornerRadius="22dp"
+            app:cardElevation="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="माझे प्रोफाइल"
+                    android:textColor="@android:color/white"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <!--                <TextView-->
+                <!--                    android:layout_width="wrap_content"-->
+                <!--                    android:layout_height="wrap_content"-->
+                <!--                    android:layout_marginTop="6dp"-->
+                <!--                    android:text="महाराष्ट्र शासन दिनदर्शिका 2026"-->
+                <!--                    android:textColor="@android:color/white"-->
+                <!--                    android:textSize="16sp" />-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_marginTop="5dp"-->
+<!--                    android:text="Government Calendar"-->
+<!--                    android:textColor="#DDE7FF"-->
+<!--                    android:textSize="12sp" />-->
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- PROFILE FORM -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/profileCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="10dp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="18dp"
+            app:cardElevation="3dp"
+            app:strokeColor="#E1E5EA"
+            app:strokeWidth="1dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp">
+
+
+                <!-- SECTION TITLE -->
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="प्रोफाइल माहिती"
+                    android:textColor="#202124"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="आपली वैयक्तिक माहिती भरा"
+                    android:textColor="#757575"
+                    android:textSize="13sp" />
+
+
+                <!-- HIDDEN FIELD -->
+
+                <EditText
+                    android:id="@+id/edd"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone" />
+
+
+                <!-- NAME -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/nameLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:hint="नाव"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed11"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPersonName"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- DESIGNATION -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/designationLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="पदनाम"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed22"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- OFFICE -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/officeLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="कार्यालयाचे नाव"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- HEADQUARTERS -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/headquarterLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="मुख्यालय"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="text"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- BASIC PAY -->
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/salaryLayout"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:hint="मूळ वेतन"
+                    app:boxCornerRadiusBottomEnd="12dp"
+                    app:boxCornerRadiusBottomStart="12dp"
+                    app:boxCornerRadiusTopEnd="12dp"
+                    app:boxCornerRadiusTopStart="12dp"
+                    app:boxStrokeColor="@color/colorPrimary">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/ed5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="number"
+                        android:textSize="15sp" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+                <!-- SAVE BUTTON -->
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/edit"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="20dp"
+                    android:text="सेव करा"
+                    android:textColor="@android:color/white"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    app:backgroundTint="@color/colorPrimary"
+                    app:cornerRadius="12dp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <!-- INFORMATION NOTE -->
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="14dp"
+            app:cardBackgroundColor="#FFF8E1"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="2dp"
+            app:strokeColor="#FFE082"
+            app:strokeWidth="1dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:gravity="center"
+                android:text="कृपया आपली माहिती योग्यरित्या भरा."
+                android:textColor="#D84315"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+        </com.google.android.material.card.MaterialCardView>
+
     </LinearLayout>
-    <EditText
-        android:id="@+id/edd"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_marginTop="20dp"
-        android:visibility="gone"
-        android:inputType="text"/>
-    <EditText
-        android:id="@+id/ed11"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_marginTop="20dp"
-        android:hint="नाव"
-        android:inputType="text"/>
 
-    <EditText
-    android:id="@+id/ed22"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:ems="10"
-    android:layout_marginTop="10dp"
-    android:hint="पदनाम"
-        android:inputType="text"/>
-
-    <EditText
-        android:id="@+id/ed3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_marginTop="10dp"
-        android:hint="कार्यालयाचे नाव"
-        android:inputType="text"/>
-
-    <EditText
-        android:id="@+id/ed4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_marginTop="10dp"
-        android:hint="मुख्यालय "
-        android:inputType="text"/>
-
-    <EditText
-        android:id="@+id/ed5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:layout_marginTop="10dp"
-        android:hint="मूळ वेतन "
-        android:inputType="number"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20sp"
-        android:layout_marginRight="20sp">
-        <Button
-            android:id="@+id/edit"
-            android:layout_width="wrap_content"
-            android:layout_height="35dp"
-            android:text="सेव करा "
-            android:background="@color/colorPrimary"
-            android:textColor="@color/White"
-            android:textSize="15dp"
-            />
-
-<!--<Button
-    android:id="@+id/save"
-    android:layout_width="wrap_content"
-    android:layout_height="35dp"
-    android:text="सेव"
-    android:background="@color/colorPrimary"
-    android:textColor="@color/White"
-    android:textSize="15dp"
-    android:layout_marginStart="10dp"
-    />-->
-
-
-    </LinearLayout>
-
-
-
-</LinearLayout>
+</ScrollView>
