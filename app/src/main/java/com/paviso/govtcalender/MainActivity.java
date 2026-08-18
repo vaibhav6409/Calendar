@@ -24,6 +24,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
+import androidx.core.view.WindowInsetsCompat;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -48,6 +51,10 @@ import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.MobileAds;
 
 import static java.util.Calendar.DATE;
 import static java.util.Calendar.MONTH;
@@ -276,6 +283,46 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
 
             calHelper = new CalenderHelper();
             setContentView(R.layout.activity_main);
+            MobileAds.initialize(this, initializationStatus -> {
+            });
+            AdView adView = findViewById(R.id.adView);
+
+            if (adView != null) {
+                AdRequest adRequest = new AdRequest.Builder().build();
+                adView.loadAd(adRequest);
+            }
+
+            View mainLayout = findViewById(R.id.mainLayout);
+            View bottomLayout = findViewById(R.id.bottomLayout);
+
+            ViewCompat.setOnApplyWindowInsetsListener(mainLayout, (view, insets) -> {
+
+                Insets systemBars = insets.getInsets(
+                        WindowInsetsCompat.Type.systemBars()
+                );
+
+                // Status bar
+                view.setPadding(
+                        0,
+                        systemBars.top,
+                        0,
+                        0
+                );
+
+                // Navigation bar
+                if (bottomLayout != null) {
+                    bottomLayout.setPadding(
+                            0,
+                            0,
+                            0,
+                            systemBars.bottom
+                    );
+                }
+
+                return insets;
+            });
+
+            ViewCompat.requestApplyInsets(mainLayout);
             myDb = new DatabaseHelper(this);
             calendar = Calendar.getInstance();
             currentMonth = calendar.get(MONTH);
@@ -570,7 +617,7 @@ public class MainActivity extends AppCompatActivity implements WSCallerVersionLi
 
                     DisplayDate.setText(date);
 
-// Selected calendar date
+                    // Selected calendar date
                     Calendar selectedCalendar = eventDay.getCalendar();
 
                     SimpleDateFormat dateFormat =

@@ -4,6 +4,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#F5F7FA"
@@ -95,6 +96,7 @@
                 android:textColor="@android:color/holo_red_light"
                 android:textSize="15sp"
                 android:textStyle="bold"
+                android:paddingVertical="3dp"
                 android:padding="5dp"/>
 
             <TextView
@@ -104,6 +106,7 @@
                 android:textColor="@android:color/holo_red_light"
                 android:textSize="15sp"
                 android:textStyle="bold"
+                android:paddingVertical="3dp"
                 android:padding="5dp"/>
 
             </LinearLayout>
@@ -118,6 +121,7 @@
                 android:textColor="@android:color/holo_red_light"
                 android:textSize="15sp"
                 android:textStyle="bold"
+                android:paddingVertical="3dp"
                 android:padding="5dp"/>
 
             <TextView
@@ -127,6 +131,7 @@
                 android:textColor="@android:color/holo_red_light"
                 android:textSize="15sp"
                 android:textStyle="bold"
+                android:paddingVertical="3dp"
                 android:padding="5dp"/>
         </LinearLayout>
         <LinearLayout
@@ -140,6 +145,7 @@
                 android:textColor="@android:color/holo_red_light"
                 android:textSize="15sp"
                 android:textStyle="bold"
+                android:paddingVertical="3dp"
                 android:padding="5dp"/>
 
         </LinearLayout>
@@ -151,11 +157,13 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="15sp"
                 android:textStyle="bold"
+                android:paddingVertical="3dp"
                 android:padding="5dp"/>
         </LinearLayout>
 
 
         <LinearLayout
+            android:id="@+id/bottomLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"

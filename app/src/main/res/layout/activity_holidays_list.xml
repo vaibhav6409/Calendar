@@ -13,7 +13,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        tools:context=".HolidaysListActivity">
+        tools:context=".HolidaysListActivity"
+        android:paddingBottom="40dp"
+        android:paddingTop="20dp">
 
     <!-- HEADER -->
     <com.google.android.material.card.MaterialCardView
@@ -58,6 +60,18 @@
         </LinearLayout>
 
     </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomLayout"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="4dp"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-4859457733348288/7338186076" />
 
 
 
