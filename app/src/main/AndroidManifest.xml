@@ -71,11 +71,6 @@
             android:parentActivityName=".MainActivity" />
 
         <activity
-            android:name=".ContactUsActivity"
-            android:exported="false"
-            android:parentActivityName=".MainActivity" />
-
-        <activity
             android:name=".ViewTaBillPDFActivity"
             android:exported="false"
             android:parentActivityName=".MainActivity" />

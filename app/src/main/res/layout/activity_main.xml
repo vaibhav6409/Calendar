@@ -82,7 +82,33 @@
             android:layout_marginEnd="5dp"
             android:background="@drawable/customborderforholidays"
             android:orientation="vertical"
-            android:padding="7dp">
+            android:paddingHorizontal="7dp"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center">
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Holidays"
+                        android:textColor="@android:color/white"
+                        android:textSize="13sp"
+                        android:textStyle="bold"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="4dp" />
+
+                </com.google.android.material.card.MaterialCardView>
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -94,20 +120,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/holo_red_light"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 android:textStyle="bold"
-                android:paddingVertical="3dp"
-                android:padding="5dp"/>
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="3dp"/>
 
             <TextView
                 android:id="@+id/holiday1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/holo_red_light"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 android:textStyle="bold"
-                android:paddingVertical="3dp"
-                android:padding="5dp"/>
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="3dp"/>
 
             </LinearLayout>
         <LinearLayout
@@ -119,20 +145,20 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/holo_red_light"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 android:textStyle="bold"
-                android:paddingVertical="3dp"
-                android:padding="5dp"/>
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="3dp"/>
 
             <TextView
                 android:id="@+id/holiday3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/holo_red_light"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 android:textStyle="bold"
-                android:paddingVertical="3dp"
-                android:padding="5dp"/>
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="3dp"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -143,10 +169,10 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textColor="@android:color/holo_red_light"
-                android:textSize="15sp"
+                android:textSize="13sp"
                 android:textStyle="bold"
-                android:paddingVertical="3dp"
-                android:padding="5dp"/>
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="3dp"/>
 
         </LinearLayout>
 
@@ -157,8 +183,8 @@
                 android:textColor="@color/colorPrimary"
                 android:textSize="15sp"
                 android:textStyle="bold"
-                android:paddingVertical="3dp"
-                android:padding="5dp"/>
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="3dp"/>
         </LinearLayout>
 
 
@@ -169,7 +195,7 @@
             android:layout_alignParentBottom="true"
             android:layout_marginStart="7dp"
             android:layout_marginEnd="7dp"
-            android:layout_marginBottom="3dp"
+            android:layout_marginBottom="1dp"
             android:gravity="center"
             android:orientation="horizontal">
 
