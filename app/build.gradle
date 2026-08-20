@@ -1,17 +1,17 @@
 apply plugin: 'com.android.application'
 
 android {
-    namespace 'com.paviso.govtcalender'
+    namespace 'com.paviso.govtcalenders'
     compileSdk 35
 
     defaultConfig {
-        applicationId "com.paviso.govtcalender"
+        applicationId "com.paviso.govtcalenders"
 
         minSdk 24
         targetSdk 36
 
-        versionCode 3
-        versionName "1.0.2.3"
+        versionCode 1
+        versionName "1.0.0.1"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
